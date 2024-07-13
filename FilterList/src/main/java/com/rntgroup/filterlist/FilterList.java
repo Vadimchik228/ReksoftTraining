@@ -181,6 +181,7 @@ public class FilterList<E> extends AbstractList<E> implements List<E> {
         private final Collection<E> predicate;
 
         private E previousElement;
+
         private E nextElement;
 
         private int previousIndex;
@@ -207,7 +208,7 @@ public class FilterList<E> extends AbstractList<E> implements List<E> {
         }
 
         private void setNext() {
-            // Осуществляется поиск previousElement, начиная с previousIndex двигаясь вправо.
+            // Осуществляется поиск nextElement, начиная с previousIndex двигаясь вправо.
             nextElement = findNext(previousIndex);
             nextIndex = nextElement == null ? iterator.nextIndex() : iterator.previousIndex();
         }
