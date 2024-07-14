@@ -340,11 +340,7 @@ public class FilterList<E> extends AbstractList<E> implements List<E> {
                 // Для выполнения теста addByIterator(), где новый элемент e добавляется справа от
                 // previousElement, но необходимо пропустить те элементы, которые содержатся в предикате,
                 // поэтому сдвигаем курсор на позицию перед nextElement.
-                int index = previousIndex;
-                while (index < nextIndex - 1) {
-                    index++;
-                }
-                setCursor(index);
+                setCursor(nextIndex - 1);
 
                 iterator.add(e);
 
