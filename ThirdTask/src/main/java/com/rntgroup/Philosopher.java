@@ -3,15 +3,14 @@ package com.rntgroup;
 import java.util.concurrent.locks.Lock;
 
 class Philosopher implements Runnable {
-    private static int generator = 1;
+    private final int id;
     private final Lock leftFork;
     private final Lock rightFork;
-    private final int id;
 
-    public Philosopher(Lock leftFork, Lock rightFork) {
+    public Philosopher(Lock leftFork, Lock rightFork, int id) {
         this.leftFork = leftFork;
         this.rightFork = rightFork;
-        id = generator++;
+        this.id = id;
     }
 
     @Override

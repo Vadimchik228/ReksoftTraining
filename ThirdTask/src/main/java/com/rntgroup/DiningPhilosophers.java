@@ -17,7 +17,7 @@ public class DiningPhilosophers {
             Lock rightFork = forks[i];
             Lock leftFork = forks[(i + 1) % forks.length];
 
-            philosophers[i] = new Philosopher(leftFork, rightFork);
+            philosophers[i] = new Philosopher(leftFork, rightFork, i + 1);
 
             Thread t = new Thread(philosophers[i]);
             t.start();
