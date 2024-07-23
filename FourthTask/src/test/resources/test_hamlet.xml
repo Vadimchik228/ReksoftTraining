@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<PLAY>
+    <TITLE AUTHOR="William Shakespeare">The Tragedy of Hamlet, Prince of Denmark</TITLE>
+    <FM>
+        <P>Text placed in the public domain by Moby Lexical Tools, 1992.</P>
+        <P>SGML markup by Jon Bosak, 1992-1994.</P>
+    </FM>
+    <PERSONAE>
+        <TITLE>Dramatis Personae</TITLE>
+        <PERSONA>CLAUDIUS, king of Denmark. </PERSONA>
+        <PGROUP>
+            <PERSONA>VOLTIMAND</PERSONA>
+            <GRPDESCR>courtiers.</GRPDESCR>
+        </PGROUP>
+        <PERSONA>A Gentleman</PERSONA>
+        <PGROUP>
+            <PERSONA>MARCELLUS</PERSONA>
+            <GRPDESCR>officers.</GRPDESCR>
+        </PGROUP>
+        <PERSONA>FRANCISCO, a soldier.</PERSONA>
+    </PERSONAE>
+    <SCNDESCR>SCENE  Denmark.</SCNDESCR>
+    <PLAYSUBT>HAMLET</PLAYSUBT>
+    <ACT><TITLE>ACT I</TITLE>
+        <SCENE><TITLE>SCENE I.  Elsinore. A platform before the castle.</TITLE>
+            <STAGEDIR>FRANCISCO at his post. Enter to him BERNARDO</STAGEDIR>
+            <SPEECH>
+                <SPEAKER>FRANCISCO</SPEAKER>
+                <SPEAKER>BERNARDO</SPEAKER>
+                <LINE>Who's there?</LINE>
+            </SPEECH>
+            <STAGEDIR>Enter KING CLAUDIUS, QUEEN GERTRUDE, HAMLET,
+                POLONIUS, LAERTES, VOLTIMAND, CORNELIUS, Lords,
+                and Attendants</STAGEDIR>
+            <SPEECH>
+                <SPEAKER>HAMLET</SPEAKER>
+                <LINE>'In her excellent white bosom, these, &amp;c.'</LINE>
+                <LINE>In the most high and palmy state of Rome,</LINE>
+                <STAGEDIR>Re-enter Ghost</STAGEDIR>
+                <LINE>I'll cross it, though it blast me. Stay, illusion!</LINE>
+            </SPEECH>
+            <SPEECH>
+                <SPEAKER>HAMLET</SPEAKER>
+                <LINE><STAGEDIR>Aside</STAGEDIR>  A little more than kin, and less than kind.</LINE>
+            </SPEECH>
+            <STAGEDIR>Exeunt</STAGEDIR>
+        </SCENE>
+    </ACT>
+</PLAY>
