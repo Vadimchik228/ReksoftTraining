@@ -1,0 +1,389 @@
+<passage file_path=/src/main/java/com/rntgroup/entities/Play.java>
+package com.rntgroup.entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Play {
+    public String title;
+    public String author;
+    public String fmText;
+    public List<Persona> personae;
+    public String sceneDescription;
+    public String playSubTitle;
+    public List<Act> acts;
+
+    public Play() {
+        personae = new ArrayList<>();
+        acts = new ArrayList<>();
+    }
+
+    public static class Persona {
+        public String name;
+        public String groupDescription;
+
+        public Persona(String name, String groupDescription) {
+            this.name = name;
+            this.groupDescription = groupDescription;
+        }
+    }
+
+    public static class Act {
+        public String title;
+        public List<Scene> scenes;
+
+        public Act() {
+            scenes = new ArrayList<>();
+        }
+    }
+
+    public static class Scene {
+        public String title;
+        public List<Speech> speeches;
+
+        public Scene() {
+            speeches = new ArrayList<>();
+        }
+    }
+
+    public static class Speech {
+
+</passage>
+<passage file_path=/src/main/java/com/rntgroup/entities/Play.java>
+    public static class Speech {
+        public String speaker;
+        public List<String> lines;
+
+        public Speech() {
+            lines = new ArrayList<>();
+        }
+    }
+}
+
+</passage>
+<passage file_path=/src/main/java/org/example/dom/DomRunner.java>
+    public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
+        File file = new File("C:\\Users\\Vadim\\Desktop\\FourthTask\\src\\main\\resources\\file.xml");
+
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Document document = builder.parse(file);
+
+        Element employersElement = (Element) document.getElementsByTagName("employers").item(0);
+        String department = employersElement.getAttribute("department");
+
+        NodeList employeeNodeList = document.getElementsByTagName("employee");
+
+        List<Employee> employeeList = new ArrayList<>();
+
+        for (int i = 0; i < employeeNodeList.getLength(); i++) {
+
+</passage>
+<passage file_path=/src/main/java/org/example/dom/DomRunner.java>
+            if ( employeeNodeList.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                Element employeeElement = (Element) employeeNodeList.item(i);
+
+                Employee employee = new Employee();
+                employee.setDepartment(department);
+                employee.setNumber(Integer.valueOf(employeeElement.getAttribute("number")));
+
+                NodeList childNodes = employeeElement.getChildNodes();
+                for (int j = 0; j < childNodes.getLength(); j++) {
+
+</passage>
+<passage file_path=/src/main/java/org/example/dom/DomRunner.java>
+                for (int j = 0; j < childNodes.getLength(); j++) {
+                    if (childNodes.item(j).getNodeType() == Node.ELEMENT_NODE) {
+                        Element childElement = (Element) childNodes.item(j);
+
+                        switch (childElement.getNodeName()) {
+                            case "name": {
+                                employee.setName(childElement.getTextContent());
+                            } break;
+
+                            case "age": {
+                                employee.setAge(Integer.valueOf(childElement.getTextContent()));
+                            } break;
+
+                            case "salary": {
+                                employee.getSalary().setValue(Double.valueOf(childElement.getTextContent()));
+                                employee.getSalary().setCurrency(childElement.getAttribute("currency"));
+                            }
+                        }
+                    }
+                }
+                employeeList.add(employee);
+            }
+
+</passage>
+<passage file_path=/src/main/java/org/example/sax/MyHandler.java>
+        String text = new String(ch, start, length);
+        if (text.contains("<") || currentElement == null) {
+            return;
+        }
+
+        switch (currentElement) {
+            case NAME_TAG: {
+                currentEmployee.name = text;
+            } break;
+
+            case AGE_TAG: {
+                currentEmployee.age = Integer.valueOf(text);
+            }
+
+            case SALARY_TAG: {
+                currentEmployee.salary.value = Double.valueOf(text);
+            } break;
+
+            default: {
+                // nothing to do
+            }
+        }
+    }
+
+    @Override
+    public void endElement(String uri, String localName, String qName) throws SAXException {
+        if (qName.equals(EMPLOYEE_TAG)) {
+            report.employeeList.add(currentEmployee);
+            currentEmployee = null;
+        }
+
+        currentElement = null;
+    }
+
+    @Override
+    public void endDocument() throws SAXException {
+        System.out.println("XML parsing is completed");
+    }
+}
+
+</passage>
+<passage file_path=/src/main/java/org/example/sax/MyHandler.java>
+            } break;
+
+            case EMPLOYERS_TAG: {
+                report.employeeList = new ArrayList<>();
+
+                if (employersDepartment == null) {
+                    employersDepartment = attributes.getValue(EMPLOYEES_DEPARTMENT_ATTRIBUTE);
+                }
+            } break;
+
+            case EMPLOYEE_TAG: {
+                currentEmployee = new Employee();
+                currentEmployee.number = Integer.valueOf(attributes.getValue(EMPLOYEE_NUMBER_ATTRIBUTE));
+                currentEmployee.department = employersDepartment;
+            } break;
+
+            case SALARY_TAG: {
+                currentEmployee.salary = new Employee.Salary();
+                currentEmployee.salary.currency = attributes.getValue(CURRENCY_ATTRIBUTE);
+            } break;
+
+            default: {
+                // nothing to do
+            }
+
+        }
+    }
+
+    @Override
+    public void characters(char[] ch, int start, int length) throws SAXException {
+        String text = new String(ch, start, length);
+
+</passage>
+<passage file_path=/src/main/java/org/example/sax/SaxRunner.java>
+package org.example.sax;
+
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import java.io.File;
+import java.io.IOException;
+
+public class SaxRunner {
+    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+        File inputStream = new File("C:\\Users\\Vadim\\Desktop\\FourthTask\\src\\main\\resources\\file.xml");
+
+        SAXParserFactory spf = SAXParserFactory.newInstance();
+        SAXParser saxParser = spf.newSAXParser();
+        MyHandler myHandler = new MyHandler();
+        saxParser.parse(inputStream, myHandler);
+
+        Report report = myHandler.getReport();
+        System.out.println("Report number: " + report.number);
+        report.employeeList.forEach(System.out::println);
+    }
+}
+
+</passage>
+<passage file_path=/src/main/java/com/rntgroup/statistics/PlayStatistics.java>
+package com.rntgroup.statistics;
+
+public class PlayStatistics {
+}
+
+</passage>
+<passage file_path=/pom.xml>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>FourthTask</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
+</passage>
+<passage file_path=/src/main/resources/file.xml>
+<?xml version="1.0" encoding="UTF-8"?>
+<report number="1234">
+    <employers department="IT">
+        <employee number="1">
+            <name>John Doe</name>
+            <age>27</age>
+            <salary currency="USD">5000</salary>
+        </employee>
+
+        <employee number="2">
+            <name>Mike Froat</name>
+            <age>35</age>
+            <salary currency="EUR">3500</salary>
+        </employee>
+
+        <employee number="3">
+            <name>Ted O'Connor</name>
+            <age>20</age>
+            <salary currency="USD">2300</salary>
+        </employee>
+
+        <employee number="4">
+            <name>Andrey Kolchakov</name>
+            <age>25</age>
+            <salary currency="RUB">150000</salary>
+        </employee>
+    </employers>
+</report>
+</passage>
+<passage file_path=/src/main/java/org/example/sax/MyHandler.java>
+            case REPORT_TAG: {
+                report = new Report();
+                report.number = Integer.valueOf(attributes.getValue(REPORT_NUMBER_ATTRIBUTE));
+            } break;
+
+</passage>
+<passage file_path=/src/main/java/com/rntgroup/util/TagNames.java>
+package com.rntgroup.util;
+
+public final class TagNames {
+    private TagNames() {
+        throw new java.lang.UnsupportedOperationException("This is a utility class and cannot be instantiated");
+    }
+}
+
+</passage>
+<passage file_path=/src/main/java/org/example/sax/Employee.java>
+    public static class Salary {
+        Double value;
+        String currency;
+
+        public Double getValue() {
+            return value;
+        }
+
+        public void setValue(Double value) {
+            this.value = value;
+        }
+
+        public String getCurrency() {
+            return currency;
+        }
+
+        public void setCurrency(String currency) {
+            this.currency = currency;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+               "department='" + department + '\'' +
+               ", number=" + number +
+               ", name='" + name + '\'' +
+               ", age=" + age +
+               ", salary=" + salary.getValue() + " " + salary.getCurrency() +
+               '}';
+    }
+}
+
+</passage>
+<passage file_path=/src/main/java/org/example/sax/Employee.java>
+package org.example.sax;
+
+public class Employee {
+    String department;
+    Integer number;
+    String name;
+    Integer age;
+    Salary salary = new Salary();
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public Salary getSalary() {
+        return salary;
+    }
+
+    public static class Salary {
+
+</passage>
+<passage file_path=/src/main/java/org/example/sax/Report.java>
+package org.example.sax;
+
+import java.util.List;
+
+public class Report {
+    Integer number;
+    List<Employee> employeeList;
+}
+
+</passage>
