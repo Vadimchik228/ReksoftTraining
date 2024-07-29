@@ -10,6 +10,7 @@ import java.util.Random;
 
 @Getter
 public class Tree {
+    private static final Random random = new Random();
     private final Leaf root;
 
     public Tree(int rootValue) {
@@ -17,9 +18,8 @@ public class Tree {
     }
 
     public static Tree generateRandomTree(int numLeaves, int maxBranchesPerLeaf, int maxValue, int maxWeight) {
-        Random random = new Random();
-
         Tree tree = new Tree(random.nextInt(maxValue) + 1);
+
         List<Leaf> leavesOnCurrentLevel = new ArrayList<>();
         leavesOnCurrentLevel.add(tree.getRoot());
 
@@ -32,24 +32,29 @@ public class Tree {
             List<Leaf> leavesOnNextLevel = new ArrayList<>();
 
             for (Leaf leaf : leavesOnCurrentLevel) {
-                int numBranches = random.nextInt(maxBranchesPerLeaf) + 1;
-
-                for (int i = 0; i < numBranches; i++) {
-                    if (!remainingLeaves.isEmpty()) {
-                        int randomIndex = random.nextInt(remainingLeaves.size());
-                        Leaf newLeaf = remainingLeaves.get(randomIndex);
-                        remainingLeaves.remove(randomIndex);
-
-                        leaf.addBranch(newLeaf, random.nextInt(maxWeight) + 1);
-                        leavesOnNextLevel.add(newLeaf);
-                    }
-                }
+                addBranchesToLeaf(leaf, leavesOnNextLevel, remainingLeaves, maxBranchesPerLeaf, maxWeight);
             }
 
             leavesOnCurrentLevel = leavesOnNextLevel;
         }
 
         return tree;
+    }
+
+    private static void addBranchesToLeaf(Leaf leaf, List<Leaf> leavesOnNextLevel, List<Leaf> remainingLeaves,
+                                          int maxBranchesPerLeaf, int maxWeight) {
+        int numBranches = random.nextInt(maxBranchesPerLeaf) + 1;
+
+        for (int i = 0; i < numBranches; i++) {
+            if (!remainingLeaves.isEmpty()) {
+                int randomIndex = random.nextInt(remainingLeaves.size());
+                Leaf newLeaf = remainingLeaves.get(randomIndex);
+                remainingLeaves.remove(randomIndex);
+
+                leaf.addBranch(newLeaf, random.nextInt(maxWeight) + 1);
+                leavesOnNextLevel.add(newLeaf);
+            }
+        }
     }
 
     public void addBranch(Leaf startLeaf, Leaf endLeaf, int weight) {

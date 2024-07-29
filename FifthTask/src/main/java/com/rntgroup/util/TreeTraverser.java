@@ -25,16 +25,7 @@ public class TreeTraverser {
 
         while (!stack.isEmpty()) {
             Node currentNode = stack.pop();
-            if (!visited.contains(currentNode)) {
-                visited.add(currentNode);
-                action.accept(currentNode);
-
-                for (Node outgoingNode : currentNode.getOutgoingNodes()) {
-                    if (!visited.contains(outgoingNode)) {
-                        stack.push(outgoingNode);
-                    }
-                }
-            }
+            processNodeDfs(currentNode, stack, visited, action);
         }
     }
 
@@ -55,15 +46,31 @@ public class TreeTraverser {
 
         while (!queue.isEmpty()) {
             Node currentNode = queue.poll();
+            processNodeBfs(currentNode, queue, visited, action);
+        }
+    }
+
+    private static void processNodeDfs(Node currentNode, Stack<Node> stack, Set<Node> visited, Consumer<Node> action) {
+        if (!visited.contains(currentNode)) {
+            visited.add(currentNode);
             action.accept(currentNode);
 
             for (Node outgoingNode : currentNode.getOutgoingNodes()) {
                 if (!visited.contains(outgoingNode)) {
-                    queue.offer(outgoingNode);
-                    visited.add(outgoingNode);
+                    stack.push(outgoingNode);
                 }
             }
         }
     }
 
+    private static void processNodeBfs(Node currentNode, Queue<Node> queue, Set<Node> visited, Consumer<Node> action) {
+        action.accept(currentNode);
+
+        for (Node outgoingNode : currentNode.getOutgoingNodes()) {
+            if (!visited.contains(outgoingNode)) {
+                queue.offer(outgoingNode);
+                visited.add(outgoingNode);
+            }
+        }
+    }
 }

@@ -18,6 +18,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.jdks/openjdk-21/lib/src.zip!/java.base/java/lang/Iterable.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/openjdk-21/lib/src.zip!/java.base/java/util/ConcurrentModificationException.java" root0="SKIP_INSPECTION" />
@@ -35,7 +38,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vadim/Desktop/FifthTask&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab__05&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vadim/Desktop/ReksoftTraining/ReksoftTraining/FifthTask&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -91,6 +96,13 @@
       <workItem from="1722010048582" duration="109000" />
       <workItem from="1722010187625" duration="30000" />
       <workItem from="1722010226440" duration="57000" />
+      <workItem from="1722241045986" duration="215000" />
+      <workItem from="1722241373793" duration="49000" />
+      <workItem from="1722241469879" duration="9000" />
+      <workItem from="1722241490878" duration="91000" />
+      <workItem from="1722241633885" duration="194000" />
+      <workItem from="1722241846098" duration="114000" />
+      <workItem from="1722241974187" duration="3318000" />
     </task>
     <servers />
   </component>
