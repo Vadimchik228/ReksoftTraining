@@ -4,47 +4,114 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6103653b-000f-4714-b7a0-517541b5ebd2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../FourthTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FourthTask/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0cd15f72-dc3e-4b13-ab5c-ddf4a0df4f02" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
-  <component name="ProjectId" id="2jjforkjwAMOIlA7CD39L1w54rB" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-21/lib/src.zip!/java.base/java/lang/Iterable.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-21/lib/src.zip!/java.base/java/util/ConcurrentModificationException.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2jjgbwa2LWl8xjoTS2Y3qG3gpgm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "lab__04",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab__05&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vadim/Desktop/ReksoftTraining/ReksoftTraining/FifthTask&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="ApplicationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rntgroup.ApplicationRunner" />
+      <module name="FifthTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rntgroup.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="FifthTash" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="FifthTash" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ApplicationRunner" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6103653b-000f-4714-b7a0-517541b5ebd2" name="Changes" comment="" />
-      <created>1721905585437</created>
+      <changelist id="0cd15f72-dc3e-4b13-ab5c-ddf4a0df4f02" name="Changes" comment="" />
+      <created>1721905975735</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1721905585437</updated>
-      <workItem from="1721905586452" duration="11000" />
+      <updated>1721905975735</updated>
+      <workItem from="1721905976993" duration="2272000" />
+      <workItem from="1721927935642" duration="10275000" />
+      <workItem from="1721993044221" duration="16477000" />
+      <workItem from="1722010048582" duration="109000" />
+      <workItem from="1722010187625" duration="30000" />
+      <workItem from="1722010226440" duration="57000" />
+      <workItem from="1722241045986" duration="215000" />
+      <workItem from="1722241373793" duration="49000" />
+      <workItem from="1722241469879" duration="9000" />
+      <workItem from="1722241490878" duration="91000" />
+      <workItem from="1722241633885" duration="194000" />
+      <workItem from="1722241846098" duration="114000" />
+      <workItem from="1722241974187" duration="3318000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FifthTash$ApplicationRunner.ic" NAME="ApplicationRunner Coverage Results" MODIFIED="1722007300645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.rntgroup.*</FILTER>
+    </SUITE>
   </component>
 </project>
