@@ -4,39 +4,67 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10ec2cc4-0b97-463c-8432-c32ac859843a" name="Changes" comment="" />
+    <list default="true" id="18f622b4-0b11-4497-95b5-1f9004f664ca" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 8
-}</component>
-  <component name="ProjectId" id="2kHyyPh6BBarLjPXwzl52Xg3TG8" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2kHRxbIFwuEEptSSK3BHFRWfco0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vadim\Desktop\EighthTask" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ApplicationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rntgroup.ApplicationRunner" />
+      <module name="EighthTask" />
+      <option name="VM_PARAMETERS" value="-Xmx768m -XX:+UseSerialGC -XX:NewSize=640m -XX:MaxNewSize=640m -XX:SurvivorRatio=3 -XX:+PrintGCDetails -Xloggc:C:\tmp\gc.log" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rntgroup.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ApplicationRunner" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="10ec2cc4-0b97-463c-8432-c32ac859843a" name="Changes" comment="" />
-      <created>1722955053176</created>
+      <changelist id="18f622b4-0b11-4497-95b5-1f9004f664ca" name="Changes" comment="" />
+      <created>1722938763508</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1722955053176</updated>
-      <workItem from="1722955054082" duration="10000" />
-      <workItem from="1722955079120" duration="25000" />
+      <updated>1722938763508</updated>
+      <workItem from="1722938764513" duration="10973000" />
     </task>
     <servers />
   </component>
