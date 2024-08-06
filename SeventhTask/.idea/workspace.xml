@@ -4,38 +4,162 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d598047a-3bd6-4a64-8694-63582ab19f4c" name="Changes" comment="" />
+    <list default="true" id="ca9724a0-baae-49b2-b0ae-043bf2631152" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
 }]]></component>
-  <component name="ProjectId" id="2k14kdxQ6JWRK7QWKjhqT1x2s1I" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2k15Dg1RGbb6pxO8lDIH1rBV4Ft" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vadim\Desktop\SeventhTask\images\point3" />
+      <recent name="C:\Users\Vadim\Desktop\SeventhTask\src\main\java\com\rntgroup\point3" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.OutOfMemoryErrorThirdExample">
+    <configuration name="OutOfMemoryErrorFirstExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rntgroup.point1.OutOfMemoryErrorFirstExample" />
+      <module name="SeventhTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rntgroup.point1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutOfMemoryErrorSecondExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rntgroup.point2.OutOfMemoryErrorSecondExample" />
+      <module name="SeventhTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rntgroup.point2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutOfMemoryErrorThirdExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rntgroup.point3.OutOfMemoryErrorThirdExample" />
+      <module name="SeventhTask" />
+      <option name="VM_PARAMETERS" value="-XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rntgroup.point3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StackOverflowErrorFifthExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rntgroup.point5.StackOverflowErrorFifthExample" />
+      <module name="SeventhTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rntgroup.point5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StackOverflowErrorFourthExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rntgroup.point4.StackOverflowErrorFourthExample" />
+      <module name="SeventhTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rntgroup.point4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.OutOfMemoryErrorFirstExample" />
+      <item itemvalue="Application.OutOfMemoryErrorSecondExample" />
+      <item itemvalue="Application.OutOfMemoryErrorThirdExample" />
+      <item itemvalue="Application.StackOverflowErrorFifthExample" />
+      <item itemvalue="Application.StackOverflowErrorFourthExample" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.OutOfMemoryErrorThirdExample" />
+        <item itemvalue="Application.StackOverflowErrorFifthExample" />
+        <item itemvalue="Application.StackOverflowErrorFourthExample" />
+        <item itemvalue="Application.OutOfMemoryErrorSecondExample" />
+        <item itemvalue="Application.OutOfMemoryErrorFirstExample" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d598047a-3bd6-4a64-8694-63582ab19f4c" name="Changes" comment="" />
-      <created>1722437895254</created>
+      <changelist id="ca9724a0-baae-49b2-b0ae-043bf2631152" name="Changes" comment="" />
+      <created>1722438123860</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1722437895254</updated>
-      <workItem from="1722437896433" duration="15000" />
+      <updated>1722438123860</updated>
+      <workItem from="1722438124880" duration="8463000" />
+      <workItem from="1722449370262" duration="6773000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.lang.ThreadLocal$SuppliedThreadLocal" memberName="supplier" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
