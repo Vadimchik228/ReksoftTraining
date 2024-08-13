@@ -1,0 +1,71 @@
+-- Создание B-tree индексов
+
+-- students
+CREATE INDEX idx_students_first_name ON students (first_name);
+CREATE INDEX idx_students_last_name ON students (last_name);
+CREATE INDEX idx_students_phone_number ON students (phone_number);
+ANAlYSE students;
+
+-- results
+CREATE INDEX idx_results_student_id ON results (student_id);
+CREATE INDEX idx_results_subject_id ON results (subject_id);
+CREATE INDEX idx_results_assessment ON results (assessment);
+ANAlYSE results;
+
+-- subjects
+CREATE INDEX idx_subjects_name ON subjects (name);
+ANAlYSE subjects;
+
+-- specializations
+CREATE INDEX idx_specializations_specialty_code ON specializations (specialty_code);
+CREATE INDEX idx_specializations_full_name ON specializations (full_name);
+ANAlYSE specializations;
+
+-- faculties
+CREATE INDEX idx_faculties_name ON faculties (name);
+ANAlYSE faculties;
+
+-- Проверка размеров индексов
+
+-- students
+SELECT pg_relation_size('idx_students_first_name');
+SELECT pg_relation_size('idx_students_last_name');
+SELECT pg_relation_size('idx_students_phone_number');
+
+-- results
+SELECT pg_relation_size('idx_results_student_id');
+SELECT pg_relation_size('idx_results_subject_id');
+SELECT pg_relation_size('idx_results_assessment');
+
+-- subjects
+SELECT pg_relation_size('idx_subjects_name');
+
+-- specializations
+SELECT pg_relation_size('idx_specializations_specialty_code');
+SELECT pg_relation_size('idx_specializations_full_name');
+
+-- faculties
+SELECT pg_relation_size('idx_faculties_name');
+
+-- Удаление индексов
+
+-- students
+DROP INDEX IF EXISTS idx_students_first_name;
+DROP INDEX IF EXISTS idx_students_last_name;
+DROP INDEX IF EXISTS idx_students_phone_number;
+
+-- results
+DROP INDEX IF EXISTS idx_results_student_id;
+DROP INDEX IF EXISTS idx_results_subject_id;
+DROP INDEX IF EXISTS idx_results_assessment;
+
+-- subjects
+DROP INDEX IF EXISTS idx_subjects_name;
+
+-- specializations
+DROP INDEX IF EXISTS idx_specializations_specialty_code;
+DROP INDEX IF EXISTS idx_specializations_full_name;
+
+-- faculties
+DROP INDEX IF EXISTS idx_faculties_name;
+
