@@ -1,0 +1,120 @@
+/*
+    1. Найти пользователя по имени (точное совпадение)
+ */
+EXPLAIN ANALYSE
+SELECT *
+FROM students
+WHERE first_name = 'Имя 10000';
+
+/*
+    2. Найти пользователя по фамилии (частичное совпадение)
+ */
+EXPLAIN ANALYSE
+SELECT *
+FROM students
+WHERE last_name LIKE '%Фамилия 2%';
+
+/*
+    3. Найти пользователя по телефонному номеру (частичное совпадение)
+ */
+EXPLAIN ANALYSE
+SELECT *
+FROM students
+WHERE phone_number LIKE '%+7950100100%';
+
+/*
+    4. Найти пользователя с его оценками по фамилии (частичное совпадение)
+ */
+EXPLAIN ANALYSE
+SELECT s.*,
+       r.assessment,
+       r.subject_id,
+       r.date
+FROM students s
+         LEFT JOIN results r ON s.id = r.student_id
+WHERE s.last_name LIKE '%Фамилия 2%'
+ORDER BY s.id, r.assessment;
+
+/*
+    7. Создание таблицы snapshot
+ */
+EXPLAIN ANALYSE CREATE TABLE snapshot AS
+SELECT s.first_name AS student_name,
+       s.last_name  AS student_surname,
+       su.name      AS subject_name,
+       r.assessment AS mark
+FROM students s
+         JOIN results r ON s.id = r.student_id
+         JOIN subjects su ON r.subject_id = su.id;
+
+/*
+    8. Функция для вычисления средней оценки студента
+ */
+CREATE OR REPLACE FUNCTION average_grade_for_student(student_id INT)
+    RETURNS DECIMAL AS
+$$
+DECLARE
+    avg_grade DECIMAL;
+BEGIN
+    SELECT AVG(assessment)
+    INTO avg_grade
+    FROM results r
+    WHERE r.student_id = average_grade_for_student.student_id;
+
+    RETURN avg_grade;
+END;
+$$ LANGUAGE plpgsql;
+
+EXPLAIN ANALYSE
+SELECT average_grade_for_student(33);
+
+/*
+    9. Функция для вычисления средней оценки по предмету
+ */
+CREATE OR REPLACE FUNCTION average_grade_for_subject(subject_id INT)
+    RETURNS DECIMAL AS
+$$
+DECLARE
+    avg_grade DECIMAL;
+BEGIN
+    SELECT AVG(assessment)
+    INTO avg_grade
+    FROM results r
+    WHERE r.subject_id = average_grade_for_subject.subject_id;
+
+    RETURN avg_grade;
+END;
+$$ LANGUAGE plpgsql;
+
+EXPLAIN ANALYSE
+SELECT average_grade_for_subject(123);
+
+/*
+     10. Функция для поиска студентов в "красной зоне"
+ */
+CREATE OR REPLACE FUNCTION students_in_red_zone()
+    RETURNS TABLE
+            (
+                student_id       BIGINT,
+                first_name       VARCHAR(35),
+                last_name        VARCHAR(35),
+                count_low_grades BIGINT
+            )
+AS
+$$
+BEGIN
+    RETURN QUERY
+        SELECT s.id,
+               s.first_name,
+               s.last_name,
+               COUNT(CASE WHEN r.assessment < 3 THEN 1 END) AS count_low_assessments
+        FROM students s
+                 JOIN results r ON s.id = r.student_id
+        GROUP BY s.id, s.first_name, s.last_name
+        HAVING COUNT(CASE WHEN r.assessment < 3 THEN 1 END) >= 2;
+END;
+$$ LANGUAGE plpgsql;
+
+EXPLAIN ANALYSE
+SELECT *
+FROM students_in_red_zone();

@@ -1,0 +1,54 @@
+CREATE TABLE students
+(
+    id                BIGSERIAL,
+    first_name        VARCHAR(35),
+    last_name         VARCHAR(35),
+    patronymic        VARCHAR(35),
+    birth_date        TIMESTAMP,
+    phone_number      VARCHAR(15),
+    course            INT,
+    study_group       INT,
+    scholarship       DECIMAL(10, 2),
+    specialization_id BIGINT,
+    creation_datetime TIMESTAMP,
+    update_datetime   TIMESTAMP
+);
+
+CREATE TABLE specializations
+(
+    id             BIGSERIAL,
+    specialty_code VARCHAR(8),
+    full_name      TEXT,
+    faculty_id     BIGINT
+);
+
+CREATE TABLE faculties
+(
+    id   BIGSERIAL,
+    name TEXT
+);
+
+CREATE TABLE teachers
+(
+    id         BIGSERIAL,
+    first_name VARCHAR(35),
+    last_name  VARCHAR(35),
+    patronymic VARCHAR(35)
+);
+
+CREATE TABLE subjects
+(
+    id   BIGSERIAL,
+    name TEXT,
+    code VARCHAR(15)
+);
+
+CREATE TABLE results
+(
+    id         BIGSERIAL,
+    student_id BIGINT,
+    subject_id BIGINT,
+    teacher_id BIGINT,
+    assessment INT,
+    date       TIMESTAMP
+);

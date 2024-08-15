@@ -1,0 +1,178 @@
+-- Добавление первичных ключей для всех таблиц
+
+ALTER TABLE students
+    ADD CONSTRAINT pk_students PRIMARY KEY (id);
+
+ALTER TABLE specializations
+    ADD CONSTRAINT pk_specializations PRIMARY KEY (id);
+
+ALTER TABLE faculties
+    ADD CONSTRAINT pk_faculties PRIMARY KEY (id);
+
+ALTER TABLE teachers
+    ADD CONSTRAINT pk_teachers PRIMARY KEY (id);
+
+ALTER TABLE subjects
+    ADD CONSTRAINT pk_subjects PRIMARY KEY (id);
+
+ALTER TABLE results
+    ADD CONSTRAINT pk_results PRIMARY KEY (id);
+
+-- Для таблицы students
+
+ALTER TABLE students
+    ADD CONSTRAINT fk_specialization_id FOREIGN KEY (specialization_id)
+        REFERENCES specializations (id);
+
+ALTER TABLE students
+    ADD CONSTRAINT uq_phone_number UNIQUE (phone_number);
+
+ALTER TABLE students
+    ALTER COLUMN first_name SET NOT NULL;
+
+ALTER TABLE students
+    ALTER COLUMN last_name SET NOT NULL;
+
+ALTER TABLE students
+    ALTER COLUMN birth_date SET NOT NULL;
+
+ALTER TABLE students
+    ALTER COLUMN phone_number SET NOT NULL;
+
+ALTER TABLE students
+    ALTER COLUMN course SET NOT NULL;
+
+ALTER TABLE students
+    ALTER COLUMN study_group SET NOT NULL;
+
+ALTER TABLE students
+    ALTER COLUMN scholarship SET NOT NULL;
+
+ALTER TABLE students
+    ALTER COLUMN specialization_id SET NOT NULL;
+
+ALTER TABLE students
+    ALTER COLUMN creation_datetime SET NOT NULL;
+
+ALTER TABLE students
+    ALTER COLUMN creation_datetime SET DEFAULT CURRENT_TIMESTAMP;
+
+CREATE OR REPLACE FUNCTION update_update_datetime()
+    RETURNS TRIGGER AS
+$$
+BEGIN
+    NEW.update_datetime = NOW();
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER update_update_datetime
+    BEFORE UPDATE
+    ON students
+    FOR EACH ROW
+EXECUTE PROCEDURE update_update_datetime();
+
+ALTER TABLE students
+    ADD CONSTRAINT check_name_symbols CHECK (first_name !~ '[@#\$]' AND
+                                             last_name !~ '[@#\$]' AND
+                                             patronymic !~ '[@#\$]');
+
+--  Телефонный номер должен соответствовать регулярному выражению,
+--  позволяющему иметь от 10 до 15 цифр, с опциональным знаком “+” в начале.
+ALTER TABLE students
+    ADD CONSTRAINT check_phone_number CHECK (phone_number ~ '^\+?\d{10,15}$');
+
+ALTER TABLE students
+    ADD CONSTRAINT check_positive_values CHECK (course > 0 AND
+                                                study_group > 0);
+
+ALTER TABLE students
+    ADD CONSTRAINT check_non_negative_values CHECK (scholarship >= 0);
+
+-- Для таблицы specializations
+
+ALTER TABLE specializations
+    ADD CONSTRAINT fk_faculty_id FOREIGN KEY (faculty_id)
+        REFERENCES faculties (id);
+
+ALTER TABLE specializations
+    ADD CONSTRAINT uq_specialty_code UNIQUE (specialty_code);
+
+ALTER TABLE specializations
+    ADD CONSTRAINT uq_full_spec_name UNIQUE (full_name);
+
+ALTER TABLE specializations
+    ALTER COLUMN specialty_code SET NOT NULL;
+
+ALTER TABLE specializations
+    ALTER COLUMN full_name SET NOT NULL;
+
+ALTER TABLE specializations
+    ALTER COLUMN faculty_id SET NOT NULL;
+
+-- Для таблицы faculties
+
+ALTER TABLE faculties
+    ADD CONSTRAINT uq_faculty_name UNIQUE (name);
+
+ALTER TABLE faculties
+    ALTER COLUMN name SET NOT NULL;
+
+-- Для таблицы teachers
+
+ALTER TABLE teachers
+    ALTER COLUMN first_name SET NOT NULL;
+
+ALTER TABLE teachers
+    ALTER COLUMN last_name SET NOT NULL;
+
+ALTER TABLE teachers
+    ADD CONSTRAINT check_name_symbols CHECK (first_name !~ '[@#\$]' AND
+                                             last_name !~ '[@#\$]' AND
+                                             patronymic !~ '[@#\$]');
+
+-- Для таблицы subjects
+
+ALTER TABLE subjects
+    ADD CONSTRAINT uq_subject_name UNIQUE (name);
+
+ALTER TABLE subjects
+    ADD CONSTRAINT uq_subject_code UNIQUE (code);
+
+ALTER TABLE subjects
+    ALTER COLUMN name SET NOT NULL;
+
+ALTER TABLE subjects
+    ALTER COLUMN code SET NOT NULL;
+
+-- Для таблицы results
+
+ALTER TABLE results
+    ADD CONSTRAINT fk_student_id FOREIGN KEY (student_id)
+        REFERENCES students (id);
+
+ALTER TABLE results
+    ADD CONSTRAINT fk_subject_id FOREIGN KEY (subject_id)
+        REFERENCES subjects (id);
+
+ALTER TABLE results
+    ADD CONSTRAINT fk_teacher_id FOREIGN KEY (teacher_id)
+        REFERENCES teachers (id);
+
+ALTER TABLE results
+    ALTER COLUMN student_id SET NOT NULL;
+
+ALTER TABLE results
+    ALTER COLUMN subject_id SET NOT NULL;
+
+ALTER TABLE results
+    ALTER COLUMN teacher_id SET NOT NULL;
+
+ALTER TABLE results
+    ALTER COLUMN assessment SET NOT NULL;
+
+ALTER TABLE results
+    ALTER COLUMN date SET NOT NULL;
+
+ALTER TABLE results
+    ADD CONSTRAINT check_assessment_range CHECK (assessment BETWEEN 1 AND 5);

@@ -1,0 +1,55 @@
+-- Создание GIN-индексов
+CREATE EXTENSION pg_trgm; 
+
+-- students
+CREATE INDEX idx_students_first_name_gin ON students USING GIN (first_name gin_trgm_ops);
+CREATE INDEX idx_students_last_name_gin ON students USING GIN (last_name gin_trgm_ops);
+CREATE INDEX idx_students_phone_number_gin ON students USING GIN (phone_number gin_trgm_ops);
+ANALYSE students;
+
+-- subjects
+CREATE INDEX idx_subjects_name_gin ON subjects USING GIN (name gin_trgm_ops);
+ANALYSE subjects;
+
+-- specializations
+CREATE INDEX idx_specializations_specialty_code_gin ON specializations USING GIN (specialty_code gin_trgm_ops);
+CREATE INDEX idx_specializations_full_name_gin ON specializations USING GIN (full_name gin_trgm_ops);
+ANALYSE specializations;
+
+-- faculties
+CREATE INDEX idx_faculties_name_gin ON faculties USING GIN (name gin_trgm_ops);
+ANALYSE faculties;
+
+-- Проверка размеров индексов
+
+-- students
+SELECT pg_relation_size('idx_students_first_name_gin');
+SELECT pg_relation_size('idx_students_last_name_gin');
+SELECT pg_relation_size('idx_students_phone_number_gin');
+
+-- subjects
+SELECT pg_relation_size('idx_subjects_name_gin');
+
+-- specializations
+SELECT pg_relation_size('idx_specializations_specialty_code_gin');
+SELECT pg_relation_size('idx_specializations_full_name_gin');
+
+-- faculties
+SELECT pg_relation_size('idx_faculties_name_gin');
+
+-- Удаление индексов
+
+-- students
+DROP INDEX IF EXISTS idx_students_first_name_gin;
+DROP INDEX IF EXISTS idx_students_last_name_gin;
+DROP INDEX IF EXISTS idx_students_phone_number_gin;
+
+-- subjects
+DROP INDEX IF EXISTS idx_subjects_name_gin;
+
+-- specializations
+DROP INDEX IF EXISTS idx_specializations_specialty_code_gin;
+DROP INDEX IF EXISTS idx_specializations_full_name_gin;
+
+-- faculties
+DROP INDEX IF EXISTS idx_faculties_name_gin;
