@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                             http://www.springframework.org/schema/beans/spring-beans.xsd
+                             http://www.springframework.org/schema/context
+                             http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+    <context:property-placeholder location="classpath:application.properties"/>
+
+    <!--Вторая задача-->
+
+    <bean id="beanA" class="com.rntgroup.task2.beans.BeanA">
+        <property name="username" value='${db.username}'/>
+        <property name="password" value='${db.password}'/>
+        <property name="poolSize" value='${db.pool.size}'/>
+        <property name="driver" value='${db.driver}'/>
+        <property name="url" value='${db.url}'/>
+        <property name="hosts">
+            <list>
+                <value>${db.hosts}</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="beanB" class="com.rntgroup.task2.beans.BeanB">
+        <constructor-arg ref="beanA"/>
+    </bean>
+
+    <bean id="beanC" class="com.rntgroup.task2.beans.BeanC">
+        <lookup-method name="getBeanD" bean="beanD"/>
+    </bean>
+
+    <bean id="beanD" class="com.rntgroup.task2.beans.BeanD" scope="prototype"/>
+
+    <bean id="newInfo" class="com.rntgroup.task2.beans.NewInfo"/>
+
+    <bean id="beanE" class="com.rntgroup.task2.beans.BeanE">
+        <replaced-method name="printInfo" replacer="newInfo"/>
+    </bean>
+
+    <bean id="beanF" class="com.rntgroup.task2.beans.BeanF" init-method="init" destroy-method="simpleDestroy">
+        <property name="value" value="Some string"/>
+    </bean>
+
+    <!--Третья задача-->
+
+    <bean class="com.rntgroup.task3.bpp.InjectRandomStringFromPredefinedListBeanPostProcessor"/>
+
+    <bean id="user" class="com.rntgroup.task3.entities.User"/>
+
+</beans>
