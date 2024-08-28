@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS site
 CREATE TABLE IF NOT EXISTS ruler_territorial_unit
 (
     id                  SERIAL PRIMARY KEY,
-    ruler_id            INTEGER NOT NULL
+    ruler_id            INTEGER
         REFERENCES
             ruler (id),
     territorial_unit_id INTEGER NOT NULL
