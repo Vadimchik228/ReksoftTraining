@@ -1,0 +1,269 @@
+2024-08-30 18:50:44 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-30 18:50:44 INFO  c.r.v.DismissalDateValidatorTest - Starting DismissalDateValidatorTest using Java 21 with PID 27008 (started by Vadim in C:\Users\Vadim\Desktop\ReksoftTraining\ReksoftTraining\Company)
+2024-08-30 18:50:44 INFO  c.r.v.DismissalDateValidatorTest - No active profile set, falling back to 1 default profile: "default"
+2024-08-30 18:50:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 18:50:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+2024-08-30 18:50:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-30 18:50:46 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1132baa3
+2024-08-30 18:50:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-30 18:50:46 INFO  liquibase.database - Set default schema name to public
+2024-08-30 18:50:47 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-30 18:50:47 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-08-30 18:50:47 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-30 18:50:47 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-30 18:50:47 INFO  liquibase.util - Run:                          0
+2024-08-30 18:50:47 INFO  liquibase.util - Previously run:               3
+2024-08-30 18:50:47 INFO  liquibase.util - Filtered out:                 0
+2024-08-30 18:50:47 INFO  liquibase.util - -------------------------------
+2024-08-30 18:50:47 INFO  liquibase.util - Total change sets:            3
+2024-08-30 18:50:47 INFO  liquibase.util - Update summary generated
+2024-08-30 18:50:47 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-30 18:50:47 INFO  liquibase.command - Command execution complete
+2024-08-30 18:50:47 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30 18:50:47 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-30 18:50:47 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-30 18:50:47 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30 18:50:48 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-30 18:50:48 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 18:50:48 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-30 18:50:49 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-30 18:50:50 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-08-30 18:50:50 INFO  c.r.v.DismissalDateValidatorTest - Started DismissalDateValidatorTest in 6.203 seconds (process running for 7.481)
+2024-08-30 18:50:50 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.rntgroup.validator.EmploymentDateValidatorTest]: EmploymentDateValidatorTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-30 18:50:50 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.rntgroup.ApplicationRunner for test class com.rntgroup.validator.EmploymentDateValidatorTest
+2024-08-30 18:50:51 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.rntgroup.validator.CorrectParentDepartmentValidatorTest]: CorrectParentDepartmentValidatorTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-30 18:50:51 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.rntgroup.ApplicationRunner for test class com.rntgroup.validator.CorrectParentDepartmentValidatorTest
+2024-08-30 18:50:51 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.rntgroup.validator.CorrectPhoneNumberValidatorTest]: CorrectPhoneNumberValidatorTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-30 18:50:51 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.rntgroup.ApplicationRunner for test class com.rntgroup.validator.CorrectPhoneNumberValidatorTest
+2024-08-30 18:50:51 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.rntgroup.validator.CorrectNameValidatorTest]: CorrectNameValidatorTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-30 18:50:51 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.rntgroup.ApplicationRunner for test class com.rntgroup.validator.CorrectNameValidatorTest
+2024-08-30 18:50:51 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 18:50:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-30 18:50:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-30 18:51:19 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-30 18:51:19 INFO  c.r.v.CorrectNameValidatorTest - Starting CorrectNameValidatorTest using Java 21 with PID 12956 (started by Vadim in C:\Users\Vadim\Desktop\ReksoftTraining\ReksoftTraining\Company)
+2024-08-30 18:51:19 INFO  c.r.v.CorrectNameValidatorTest - No active profile set, falling back to 1 default profile: "default"
+2024-08-30 18:51:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 18:51:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
+2024-08-30 18:51:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-30 18:51:21 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@62e73ab6
+2024-08-30 18:51:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-30 18:51:21 INFO  liquibase.database - Set default schema name to public
+2024-08-30 18:51:21 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-30 18:51:21 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-08-30 18:51:21 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-30 18:51:21 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-30 18:51:21 INFO  liquibase.util - Run:                          0
+2024-08-30 18:51:21 INFO  liquibase.util - Previously run:               3
+2024-08-30 18:51:21 INFO  liquibase.util - Filtered out:                 0
+2024-08-30 18:51:21 INFO  liquibase.util - -------------------------------
+2024-08-30 18:51:21 INFO  liquibase.util - Total change sets:            3
+2024-08-30 18:51:21 INFO  liquibase.util - Update summary generated
+2024-08-30 18:51:21 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-30 18:51:21 INFO  liquibase.command - Command execution complete
+2024-08-30 18:51:22 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30 18:51:22 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-30 18:51:22 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-30 18:51:22 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30 18:51:23 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-30 18:51:23 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 18:51:23 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-30 18:51:24 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-30 18:51:24 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-08-30 18:51:25 INFO  c.r.v.CorrectNameValidatorTest - Started CorrectNameValidatorTest in 5.966 seconds (process running for 6.91)
+2024-08-30 18:51:25 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 18:51:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-30 18:51:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-30 18:52:05 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-30 18:52:05 INFO  c.r.v.EmploymentDateValidatorTest - Starting EmploymentDateValidatorTest using Java 21 with PID 6828 (started by Vadim in C:\Users\Vadim\Desktop\ReksoftTraining\ReksoftTraining\Company)
+2024-08-30 18:52:05 INFO  c.r.v.EmploymentDateValidatorTest - No active profile set, falling back to 1 default profile: "default"
+2024-08-30 18:52:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 18:52:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2024-08-30 18:52:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-30 18:52:07 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@61b838f2
+2024-08-30 18:52:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-30 18:52:07 INFO  liquibase.database - Set default schema name to public
+2024-08-30 18:52:07 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-30 18:52:07 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-08-30 18:52:07 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-30 18:52:07 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-30 18:52:07 INFO  liquibase.util - Run:                          0
+2024-08-30 18:52:07 INFO  liquibase.util - Previously run:               3
+2024-08-30 18:52:07 INFO  liquibase.util - Filtered out:                 0
+2024-08-30 18:52:07 INFO  liquibase.util - -------------------------------
+2024-08-30 18:52:07 INFO  liquibase.util - Total change sets:            3
+2024-08-30 18:52:07 INFO  liquibase.util - Update summary generated
+2024-08-30 18:52:07 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-30 18:52:07 INFO  liquibase.command - Command execution complete
+2024-08-30 18:52:07 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30 18:52:08 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-30 18:52:08 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-30 18:52:08 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30 18:52:09 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-30 18:52:09 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 18:52:09 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-30 18:52:10 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-30 18:52:10 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-08-30 18:52:10 INFO  c.r.v.EmploymentDateValidatorTest - Started EmploymentDateValidatorTest in 5.73 seconds (process running for 6.673)
+2024-08-30 18:52:11 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 18:52:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-30 18:52:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-30 18:54:22 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-30 18:54:22 INFO  c.r.i.service.DepartmentServiceTest - Starting DepartmentServiceTest using Java 21 with PID 1540 (started by Vadim in C:\Users\Vadim\Desktop\ReksoftTraining\ReksoftTraining\Company)
+2024-08-30 18:54:22 INFO  c.r.i.service.DepartmentServiceTest - The following 1 profile is active: "test"
+2024-08-30 18:54:23 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 18:54:23 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
+2024-08-30 18:54:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-30 18:54:24 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@ba0018e
+2024-08-30 18:54:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-30 18:54:24 INFO  liquibase.database - Set default schema name to public
+2024-08-30 18:54:25 INFO  liquibase.changelog - Creating database history table with name: public.databasechangelog
+2024-08-30 18:54:25 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-30 18:54:25 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-30 18:54:25 INFO  liquibase.command - Using deploymentId: 5033265349
+2024-08-30 18:54:25 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-30 18:54:25 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::1::rntgroup
+2024-08-30 18:54:25 INFO  liquibase.changelog - Custom SQL executed
+2024-08-30 18:54:25 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::1::rntgroup ran successfully in 19ms
+2024-08-30 18:54:25 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::2::rntgroup
+2024-08-30 18:54:25 INFO  liquibase.changelog - Custom SQL executed
+2024-08-30 18:54:25 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::2::rntgroup ran successfully in 7ms
+2024-08-30 18:54:25 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::3::rntgroup
+2024-08-30 18:54:25 INFO  liquibase.changelog - Custom SQL executed
+2024-08-30 18:54:25 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::3::rntgroup ran successfully in 11ms
+2024-08-30 18:54:25 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-30 18:54:25 INFO  liquibase.util - Run:                          3
+2024-08-30 18:54:25 INFO  liquibase.util - Previously run:               0
+2024-08-30 18:54:25 INFO  liquibase.util - Filtered out:                 0
+2024-08-30 18:54:25 INFO  liquibase.util - -------------------------------
+2024-08-30 18:54:25 INFO  liquibase.util - Total change sets:            3
+2024-08-30 18:54:25 INFO  liquibase.util - Update summary generated
+2024-08-30 18:54:25 INFO  liquibase.command - Update command completed successfully.
+2024-08-30 18:54:25 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 3
+2024-08-30 18:54:25 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-30 18:54:25 INFO  liquibase.command - Command execution complete
+2024-08-30 18:54:25 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30 18:54:25 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-30 18:54:25 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-30 18:54:25 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30 18:54:26 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-30 18:54:26 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 18:54:26 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-30 18:54:27 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-30 18:54:28 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-08-30 18:54:28 INFO  c.r.i.service.DepartmentServiceTest - Started DepartmentServiceTest in 5.856 seconds (process running for 13.212)
+2024-08-30 18:54:29 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23503
+2024-08-30 18:54:29 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: update or delete on table "department" violates foreign key constraint "department_parent_department_id_fkey" on table "department"
+  Подробности: Key (id)=(2) is still referenced from table "department".
+2024-08-30 18:54:29 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2024-08-30 18:54:29 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "department_name_key"
+  Подробности: Key (name)=(Департамент финансов и управления) already exists.
+2024-08-30 18:54:29 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2024-08-30 18:54:29 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "department_name_key"
+  Подробности: Key (name)=(Департамент финансов и управления) already exists.
+2024-08-30 18:54:29 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 18:54:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-30 18:54:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-30 18:54:39 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-30 18:54:40 INFO  c.r.i.service.EmployeeServiceTest - Starting EmployeeServiceTest using Java 21 with PID 14380 (started by Vadim in C:\Users\Vadim\Desktop\ReksoftTraining\ReksoftTraining\Company)
+2024-08-30 18:54:40 INFO  c.r.i.service.EmployeeServiceTest - The following 1 profile is active: "test"
+2024-08-30 18:54:41 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 18:54:41 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
+2024-08-30 18:54:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-30 18:54:41 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@141b011a
+2024-08-30 18:54:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-30 18:54:42 INFO  liquibase.database - Set default schema name to public
+2024-08-30 18:54:42 INFO  liquibase.changelog - Creating database history table with name: public.databasechangelog
+2024-08-30 18:54:42 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-30 18:54:42 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-30 18:54:42 INFO  liquibase.command - Using deploymentId: 5033282454
+2024-08-30 18:54:42 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-30 18:54:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::1::rntgroup
+2024-08-30 18:54:42 INFO  liquibase.changelog - Custom SQL executed
+2024-08-30 18:54:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::1::rntgroup ran successfully in 15ms
+2024-08-30 18:54:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::2::rntgroup
+2024-08-30 18:54:42 INFO  liquibase.changelog - Custom SQL executed
+2024-08-30 18:54:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::2::rntgroup ran successfully in 6ms
+2024-08-30 18:54:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::3::rntgroup
+2024-08-30 18:54:42 INFO  liquibase.changelog - Custom SQL executed
+2024-08-30 18:54:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::3::rntgroup ran successfully in 10ms
+2024-08-30 18:54:42 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-30 18:54:42 INFO  liquibase.util - Run:                          3
+2024-08-30 18:54:42 INFO  liquibase.util - Previously run:               0
+2024-08-30 18:54:42 INFO  liquibase.util - Filtered out:                 0
+2024-08-30 18:54:42 INFO  liquibase.util - -------------------------------
+2024-08-30 18:54:42 INFO  liquibase.util - Total change sets:            3
+2024-08-30 18:54:42 INFO  liquibase.util - Update summary generated
+2024-08-30 18:54:42 INFO  liquibase.command - Update command completed successfully.
+2024-08-30 18:54:42 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 3
+2024-08-30 18:54:42 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-30 18:54:42 INFO  liquibase.command - Command execution complete
+2024-08-30 18:54:42 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30 18:54:42 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-30 18:54:42 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-30 18:54:42 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30 18:54:43 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-30 18:54:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 18:54:44 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-30 18:54:45 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-30 18:54:45 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-08-30 18:54:45 INFO  c.r.i.service.EmployeeServiceTest - Started EmployeeServiceTest in 5.953 seconds (process running for 10.424)
+2024-08-30 18:54:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 18:54:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-30 18:54:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-30 18:54:57 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-30 18:54:57 INFO  c.r.i.service.PositionServiceTest - Starting PositionServiceTest using Java 21 with PID 14260 (started by Vadim in C:\Users\Vadim\Desktop\ReksoftTraining\ReksoftTraining\Company)
+2024-08-30 18:54:57 INFO  c.r.i.service.PositionServiceTest - The following 1 profile is active: "test"
+2024-08-30 18:54:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 18:54:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2024-08-30 18:54:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-30 18:54:59 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@73ddb7ef
+2024-08-30 18:54:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-30 18:54:59 INFO  liquibase.database - Set default schema name to public
+2024-08-30 18:54:59 INFO  liquibase.changelog - Creating database history table with name: public.databasechangelog
+2024-08-30 18:54:59 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-30 18:54:59 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-30 18:54:59 INFO  liquibase.command - Using deploymentId: 5033299913
+2024-08-30 18:54:59 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-30 18:54:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::1::rntgroup
+2024-08-30 18:54:59 INFO  liquibase.changelog - Custom SQL executed
+2024-08-30 18:54:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::1::rntgroup ran successfully in 16ms
+2024-08-30 18:54:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::2::rntgroup
+2024-08-30 18:54:59 INFO  liquibase.changelog - Custom SQL executed
+2024-08-30 18:54:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::2::rntgroup ran successfully in 6ms
+2024-08-30 18:54:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::3::rntgroup
+2024-08-30 18:54:59 INFO  liquibase.changelog - Custom SQL executed
+2024-08-30 18:54:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::3::rntgroup ran successfully in 9ms
+2024-08-30 18:54:59 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-30 18:54:59 INFO  liquibase.util - Run:                          3
+2024-08-30 18:54:59 INFO  liquibase.util - Previously run:               0
+2024-08-30 18:54:59 INFO  liquibase.util - Filtered out:                 0
+2024-08-30 18:54:59 INFO  liquibase.util - -------------------------------
+2024-08-30 18:54:59 INFO  liquibase.util - Total change sets:            3
+2024-08-30 18:54:59 INFO  liquibase.util - Update summary generated
+2024-08-30 18:54:59 INFO  liquibase.command - Update command completed successfully.
+2024-08-30 18:54:59 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 3
+2024-08-30 18:54:59 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-30 18:54:59 INFO  liquibase.command - Command execution complete
+2024-08-30 18:55:00 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30 18:55:00 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-08-30 18:55:00 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-30 18:55:00 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30 18:55:01 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-30 18:55:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 18:55:01 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-30 18:55:02 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-30 18:55:02 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-08-30 18:55:02 INFO  c.r.i.service.PositionServiceTest - Started PositionServiceTest in 5.778 seconds (process running for 10.132)
+2024-08-30 18:55:03 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23503
+2024-08-30 18:55:03 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: update or delete on table "position" violates foreign key constraint "employee_position_id_fkey" on table "employee"
+  Подробности: Key (id)=(2) is still referenced from table "employee".
+2024-08-30 18:55:03 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2024-08-30 18:55:03 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "position_name_key"
+  Подробности: Key (name)=(Менеджер по закупкам) already exists.
+2024-08-30 18:55:03 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2024-08-30 18:55:03 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "position_name_key"
+  Подробности: Key (name)=(Финансовый директор (CFO)) already exists.
+2024-08-30 18:55:03 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 18:55:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-30 18:55:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
