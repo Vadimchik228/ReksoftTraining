@@ -2,8 +2,8 @@ package com.rntgroup.web.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rntgroup.database.entity.Sex;
-import com.rntgroup.web.dto.validation.OnCreate;
-import com.rntgroup.web.dto.validation.OnUpdate;
+import com.rntgroup.web.dto.validation.group.OnCreate;
+import com.rntgroup.web.dto.validation.group.OnUpdate;
 import com.rntgroup.web.dto.validation.annotation.CorrectName;
 import com.rntgroup.web.dto.validation.annotation.CorrectPhoneNumber;
 import com.rntgroup.web.dto.validation.annotation.DismissalDateAfterEmploymentDate;

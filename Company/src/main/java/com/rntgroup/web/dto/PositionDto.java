@@ -1,7 +1,7 @@
 package com.rntgroup.web.dto;
 
-import com.rntgroup.web.dto.validation.OnCreate;
-import com.rntgroup.web.dto.validation.OnUpdate;
+import com.rntgroup.web.dto.validation.group.OnCreate;
+import com.rntgroup.web.dto.validation.group.OnUpdate;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Null;

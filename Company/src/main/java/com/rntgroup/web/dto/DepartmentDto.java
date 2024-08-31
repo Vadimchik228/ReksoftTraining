@@ -1,8 +1,8 @@
 package com.rntgroup.web.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.rntgroup.web.dto.validation.OnCreate;
-import com.rntgroup.web.dto.validation.OnUpdate;
+import com.rntgroup.web.dto.validation.group.OnCreate;
+import com.rntgroup.web.dto.validation.group.OnUpdate;
 import com.rntgroup.web.dto.validation.annotation.CorrectParentDepartmentId;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
@@ -11,9 +11,7 @@ import jakarta.validation.constraints.Past;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import java.text.DateFormat;
 import java.time.LocalDate;
 
 @Data
