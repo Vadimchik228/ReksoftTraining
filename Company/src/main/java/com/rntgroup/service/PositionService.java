@@ -1,6 +1,6 @@
 package com.rntgroup.service;
 
-import com.rntgroup.web.dto.PositionDto;
+import com.rntgroup.web.dto.position.PositionDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

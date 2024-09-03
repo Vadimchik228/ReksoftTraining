@@ -1,11 +1,23 @@
 spring:
+  config:
+    import: optional:file:.env[.properties]
   datasource:
-    url: jdbc:postgresql://localhost:5432/Company
-    username: postgres
-    password: 1
+    url: jdbc:postgresql://${HOST}:5432/${POSTGRES_DATABASE}
+    username: ${POSTGRES_USERNAME}
+    password: ${POSTGRES_PASSWORD}
     driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    enabled: true
   jpa:
     properties.hibernate:
 #      show_sql: true
 #      format_sql: true
       hbm2ddl.auto: validate
+security:
+  jwt:
+    secret: ${JWT_SECRET}
+    access: 1
+    refresh: 30
+springdoc:
+  override-with-generic-response: false

@@ -1,13 +1,13 @@
-package com.rntgroup.web.dto;
+package com.rntgroup.web.dto.employee;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rntgroup.database.entity.Sex;
-import com.rntgroup.web.dto.validation.group.OnCreate;
-import com.rntgroup.web.dto.validation.group.OnUpdate;
 import com.rntgroup.web.dto.validation.annotation.CorrectName;
 import com.rntgroup.web.dto.validation.annotation.CorrectPhoneNumber;
 import com.rntgroup.web.dto.validation.annotation.DismissalDateAfterEmploymentDate;
 import com.rntgroup.web.dto.validation.annotation.EmploymentDateAfterBirthDate;
+import com.rntgroup.web.dto.validation.group.OnCreate;
+import com.rntgroup.web.dto.validation.group.OnUpdate;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -45,12 +45,10 @@ public class EmployeeDto {
     )
     @Size(
             message = "Last name must consist of no more than 35 characters.",
-            max = 35,
-            groups = {OnCreate.class, OnUpdate.class}
+            max = 35
     )
     @CorrectName(
-            message = "Last name must be valid",
-            groups = {OnCreate.class, OnUpdate.class}
+            message = "Last name must be valid"
     )
     private String lastName;
 
@@ -60,23 +58,19 @@ public class EmployeeDto {
     )
     @Size(
             message = "First name must consist of no more than 35 characters.",
-            max = 35,
-            groups = {OnCreate.class, OnUpdate.class}
+            max = 35
     )
     @CorrectName(
-            message = "First name must be valid",
-            groups = {OnCreate.class, OnUpdate.class}
+            message = "First name must be valid"
     )
     private String firstName;
 
     @Size(
             message = "Patronymic must consist of no more than 35 characters.",
-            max = 35,
-            groups = {OnCreate.class, OnUpdate.class}
+            max = 35
     )
     @CorrectName(
-            message = "Patronymic must be valid",
-            groups = {OnCreate.class, OnUpdate.class}
+            message = "Patronymic must be valid"
     )
     private String patronymic;
 
@@ -91,8 +85,7 @@ public class EmployeeDto {
             groups = {OnCreate.class, OnUpdate.class}
     )
     @Past(
-            message = "Birth date must be in the past.",
-            groups = {OnCreate.class, OnUpdate.class}
+            message = "Birth date must be in the past."
     )
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
@@ -101,7 +94,7 @@ public class EmployeeDto {
             message = "Phone number must be not null.",
             groups = {OnCreate.class, OnUpdate.class}
     )
-    @CorrectPhoneNumber(groups = {OnCreate.class, OnUpdate.class})
+    @CorrectPhoneNumber
     private String phoneNumber;
 
     @NotNull(
@@ -130,14 +123,12 @@ public class EmployeeDto {
     )
     @DecimalMin(
             value = "0",
-            message = "Salary must be not less than 0.",
-            groups = {OnCreate.class, OnUpdate.class}
+            message = "Salary must be not less than 0."
     )
     @DecimalMax(
             value = "100000000",
             inclusive = false,
-            message = "Salary must be less than 100 million.",
-            groups = {OnCreate.class, OnUpdate.class}
+            message = "Salary must be less than 100 million."
     )
     private BigDecimal salary;
 

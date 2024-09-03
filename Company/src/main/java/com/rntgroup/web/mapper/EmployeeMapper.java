@@ -1,7 +1,7 @@
 package com.rntgroup.web.mapper;
 
 import com.rntgroup.database.entity.Employee;
-import com.rntgroup.web.dto.EmployeeDto;
+import com.rntgroup.web.dto.employee.EmployeeDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

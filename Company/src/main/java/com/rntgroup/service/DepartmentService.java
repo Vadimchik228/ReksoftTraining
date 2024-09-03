@@ -1,6 +1,6 @@
 package com.rntgroup.service;
 
-import com.rntgroup.web.dto.DepartmentDto;
+import com.rntgroup.web.dto.department.DepartmentDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

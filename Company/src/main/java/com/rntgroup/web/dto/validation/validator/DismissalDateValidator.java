@@ -1,6 +1,6 @@
 package com.rntgroup.web.dto.validation.validator;
 
-import com.rntgroup.web.dto.EmployeeDto;
+import com.rntgroup.web.dto.employee.EmployeeDto;
 import com.rntgroup.web.dto.validation.annotation.DismissalDateAfterEmploymentDate;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

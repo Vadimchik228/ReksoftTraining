@@ -27,7 +27,10 @@
         <springdoc.version>2.5.0</springdoc.version>
         <libphonenumber.version>8.13.44</libphonenumber.version>
         <jakarta.ws.rs.api.version>3.0.0</jakarta.ws.rs.api.version>
-        <h2database.version>2.3.232</h2database.version>
+        <jjwt.version>0.12.5</jjwt.version>
+        <hibernate.envers.version>6.5.0.Final</hibernate.envers.version>
+        <spring.data.envers.version>3.3.2</spring.data.envers.version>
+        <spring.security.test.version>6.3.3</spring.security.test.version>
     </properties>
 
     <dependencies>
@@ -49,6 +52,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>${springdoc.version}</version>
         </dependency>
 
         <dependency>
@@ -96,14 +105,15 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>${springdoc.version}</version>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-envers</artifactId>
+            <version>${hibernate.envers.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-envers</artifactId>
+            <version>${spring.data.envers.version}</version>
         </dependency>
 
         <dependency>
@@ -112,11 +122,50 @@
             <version>${libphonenumber.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
+        <!-- security -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>${jjwt.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>${jjwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>${jjwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- тесты -->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <version>${spring.security.test.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -137,6 +186,7 @@
             <artifactId>postgresql</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
 </project>

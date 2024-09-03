@@ -1,4 +1,4 @@
-package com.rntgroup.web.dto;
+package com.rntgroup.web.dto.response;
 
 import lombok.Value;
 import org.springframework.data.domain.Page;

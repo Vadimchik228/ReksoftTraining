@@ -1,4 +1,4 @@
-package com.rntgroup.web.dto;
+package com.rntgroup.web.dto.department;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rntgroup.web.dto.validation.group.OnCreate;
@@ -44,8 +44,7 @@ public class DepartmentDto {
             groups = {OnCreate.class, OnUpdate.class}
     )
     @Past(
-            message = "Creation date must be in the past.",
-            groups = {OnCreate.class, OnUpdate.class}
+            message = "Creation date must be in the past."
     )
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate creationDate;
