@@ -1,7 +1,6 @@
 package com.rntgroup.web.security.expression;
 
 import com.rntgroup.database.entity.Role;
-import com.rntgroup.service.UserService;
 import com.rntgroup.web.security.JwtEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
@@ -12,9 +11,6 @@ import org.springframework.stereotype.Service;
 @Service("cse")
 @RequiredArgsConstructor
 public class CustomSecurityExpression {
-
-    private final UserService userService;
-
     public boolean hasAdminRights() {
         var authentication = SecurityContextHolder.getContext().getAuthentication();
         return hasAnyRole(authentication, Role.ADMIN);
@@ -39,5 +35,4 @@ public class CustomSecurityExpression {
 
         return false;
     }
-
 }

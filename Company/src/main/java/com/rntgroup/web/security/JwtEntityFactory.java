@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public final class JwtEntityFactory {
-
     public static JwtEntity create(final User user) {
         return new JwtEntity(
                 user.getId(),
@@ -27,5 +26,4 @@ public final class JwtEntityFactory {
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
     }
-
 }
