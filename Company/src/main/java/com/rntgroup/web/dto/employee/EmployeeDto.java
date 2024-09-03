@@ -45,10 +45,12 @@ public class EmployeeDto {
     )
     @Size(
             message = "Last name must consist of no more than 35 characters.",
-            max = 35
+            max = 35,
+            groups = {OnCreate.class, OnUpdate.class}
     )
     @CorrectName(
-            message = "Last name must be valid"
+            message = "Last name must be valid",
+            groups = {OnCreate.class, OnUpdate.class}
     )
     private String lastName;
 
@@ -58,19 +60,23 @@ public class EmployeeDto {
     )
     @Size(
             message = "First name must consist of no more than 35 characters.",
-            max = 35
+            max = 35,
+            groups = {OnCreate.class, OnUpdate.class}
     )
     @CorrectName(
-            message = "First name must be valid"
+            message = "First name must be valid",
+            groups = {OnCreate.class, OnUpdate.class}
     )
     private String firstName;
 
     @Size(
             message = "Patronymic must consist of no more than 35 characters.",
-            max = 35
+            max = 35,
+            groups = {OnCreate.class, OnUpdate.class}
     )
     @CorrectName(
-            message = "Patronymic must be valid"
+            message = "Patronymic must be valid",
+            groups = {OnCreate.class, OnUpdate.class}
     )
     private String patronymic;
 
@@ -85,7 +91,8 @@ public class EmployeeDto {
             groups = {OnCreate.class, OnUpdate.class}
     )
     @Past(
-            message = "Birth date must be in the past."
+            message = "Birth date must be in the past.",
+            groups = {OnCreate.class, OnUpdate.class}
     )
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
@@ -94,7 +101,9 @@ public class EmployeeDto {
             message = "Phone number must be not null.",
             groups = {OnCreate.class, OnUpdate.class}
     )
-    @CorrectPhoneNumber
+    @CorrectPhoneNumber(
+            groups = {OnCreate.class, OnUpdate.class}
+    )
     private String phoneNumber;
 
     @NotNull(
@@ -123,12 +132,14 @@ public class EmployeeDto {
     )
     @DecimalMin(
             value = "0",
-            message = "Salary must be not less than 0."
+            message = "Salary must be not less than 0.",
+            groups = {OnCreate.class, OnUpdate.class}
     )
     @DecimalMax(
             value = "100000000",
             inclusive = false,
-            message = "Salary must be less than 100 million."
+            message = "Salary must be less than 100 million.",
+            groups = {OnCreate.class, OnUpdate.class}
     )
     private BigDecimal salary;
 

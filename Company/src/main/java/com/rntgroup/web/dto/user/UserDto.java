@@ -2,9 +2,9 @@ package com.rntgroup.web.dto.user;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.rntgroup.web.dto.validation.annotation.CorrectPassword;
-import com.rntgroup.web.dto.validation.group.OnUpdate;
 import com.rntgroup.web.dto.validation.annotation.MatchingPasswords;
 import com.rntgroup.web.dto.validation.group.OnCreate;
+import com.rntgroup.web.dto.validation.group.OnUpdate;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -36,7 +36,8 @@ public class UserDto {
     )
     @Size(
             message = "Name must consist of no more than 255 characters.",
-            max = 255
+            max = 255,
+            groups = {OnCreate.class, OnUpdate.class}
     )
     private String name;
 
@@ -49,7 +50,8 @@ public class UserDto {
     )
     @Size(
             message = "Username must consist of no more than 255 characters.",
-            max = 255
+            max = 255,
+            groups = {OnCreate.class, OnUpdate.class}
     )
     private String username;
 
@@ -62,9 +64,10 @@ public class UserDto {
     )
     @Size(
             message = "Password must consist of no more than 255 characters.",
-            max = 255
+            max = 255,
+            groups = {OnCreate.class, OnUpdate.class}
     )
-    @CorrectPassword (
+    @CorrectPassword(
             groups = {OnCreate.class, OnUpdate.class}
     )
     private String password;

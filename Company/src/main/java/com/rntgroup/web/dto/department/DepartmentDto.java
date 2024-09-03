@@ -44,7 +44,8 @@ public class DepartmentDto {
             groups = {OnCreate.class, OnUpdate.class}
     )
     @Past(
-            message = "Creation date must be in the past."
+            message = "Creation date must be in the past.",
+            groups = {OnCreate.class, OnUpdate.class}
     )
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate creationDate;
