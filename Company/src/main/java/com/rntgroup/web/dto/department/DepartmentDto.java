@@ -1,4 +1,4 @@
-package com.rntgroup.web.dto;
+package com.rntgroup.web.dto.department;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rntgroup.web.dto.validation.group.OnCreate;

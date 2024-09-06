@@ -1,13 +1,13 @@
-package com.rntgroup.web.dto;
+package com.rntgroup.web.dto.employee;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rntgroup.database.entity.Sex;
-import com.rntgroup.web.dto.validation.group.OnCreate;
-import com.rntgroup.web.dto.validation.group.OnUpdate;
 import com.rntgroup.web.dto.validation.annotation.CorrectName;
 import com.rntgroup.web.dto.validation.annotation.CorrectPhoneNumber;
 import com.rntgroup.web.dto.validation.annotation.DismissalDateAfterEmploymentDate;
 import com.rntgroup.web.dto.validation.annotation.EmploymentDateAfterBirthDate;
+import com.rntgroup.web.dto.validation.group.OnCreate;
+import com.rntgroup.web.dto.validation.group.OnUpdate;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -101,7 +101,9 @@ public class EmployeeDto {
             message = "Phone number must be not null.",
             groups = {OnCreate.class, OnUpdate.class}
     )
-    @CorrectPhoneNumber(groups = {OnCreate.class, OnUpdate.class})
+    @CorrectPhoneNumber(
+            groups = {OnCreate.class, OnUpdate.class}
+    )
     private String phoneNumber;
 
     @NotNull(

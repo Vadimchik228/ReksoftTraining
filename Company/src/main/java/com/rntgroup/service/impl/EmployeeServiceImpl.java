@@ -9,7 +9,7 @@ import com.rntgroup.database.repository.PositionRepository;
 import com.rntgroup.exception.InvalidDataException;
 import com.rntgroup.exception.ResourceNotFoundException;
 import com.rntgroup.service.EmployeeService;
-import com.rntgroup.web.dto.EmployeeDto;
+import com.rntgroup.web.dto.employee.EmployeeDto;
 import com.rntgroup.web.mapper.EmployeeMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -32,36 +32,39 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     @Transactional(readOnly = true)
-    public EmployeeDto getById(Long id) {
+    public EmployeeDto getById(final Long id) {
         return employeeRepository.findById(id)
                 .map(employeeMapper::toDto)
                 .orElseThrow(() -> new ResourceNotFoundException(
-                        "Couldn't find employee with id " + id + "."));
+                                "Couldn't find employee with id " + id + "."
+                        )
+                );
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<EmployeeDto> getDirectorByDepartmentId(Integer departmentId) {
-        checkIfTheDepartmentIdIsSetCorrectly(departmentId);
+    public Optional<EmployeeDto> getDirectorByDepartmentId(final Integer departmentId) {
+        checkIfDepartmentIdIsSetCorrectly(departmentId);
         return employeeRepository.findDirectorByDepartmentId(departmentId)
                 .map(employeeMapper::toDto);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Page<EmployeeDto> getAllByDepartmentId(Integer departmentId, Pageable pageable) {
+    public Page<EmployeeDto> getAllByDepartmentId(
+            final Integer departmentId, final Pageable pageable) {
         return employeeRepository.findAllByDepartmentId(departmentId, pageable)
                 .map(employeeMapper::toDto);
     }
 
     @Override
-    public EmployeeDto update(EmployeeDto dto) {
-        checkIfTheEmployeeIdExists(dto.getId());
+    public EmployeeDto update(final EmployeeDto dto) {
+        checkIfEmployeeIdExists(dto.getId());
 
-        var position = checkIfThePositionIdIsSetCorrectly(dto.getPositionId());
+        var position = checkIfPositionIdIsSetCorrectly(dto.getPositionId());
 
         var departmentId = dto.getDepartmentId();
-        var department = checkIfTheDepartmentIdIsSetCorrectly(departmentId);
+        var department = checkIfDepartmentIdIsSetCorrectly(departmentId);
 
         var director = employeeRepository.findDirectorByDepartmentId(departmentId);
         // В случае, если изменяется непосредственно сам директор,
@@ -82,10 +85,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public EmployeeDto create(EmployeeDto dto) {
-        var position = checkIfThePositionIdIsSetCorrectly(dto.getPositionId());
+        var position = checkIfPositionIdIsSetCorrectly(dto.getPositionId());
 
         var departmentId = dto.getDepartmentId();
-        var department = checkIfTheDepartmentIdIsSetCorrectly(departmentId);
+        var department = checkIfDepartmentIdIsSetCorrectly(departmentId);
 
         var director = employeeRepository.findDirectorByDepartmentId(departmentId);
         director.ifPresent(employee ->
@@ -104,69 +107,75 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public void delete(Long id) {
-        checkIfTheEmployeeIdExists(id);
+    public void delete(final Long id) {
+        checkIfEmployeeIdExists(id);
         employeeRepository.deleteById(id);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Long countAllByDepartmentId(Integer departmentId) {
-        checkIfTheDepartmentIdIsSetCorrectly(departmentId);
+    public Long countAllByDepartmentId(final Integer departmentId) {
+        checkIfDepartmentIdIsSetCorrectly(departmentId);
         return employeeRepository.countAllByDepartmentId(departmentId);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public BigDecimal sumSalariesByDepartmentId(Integer departmentId) {
-        checkIfTheDepartmentIdIsSetCorrectly(departmentId);
+    public BigDecimal sumSalariesByDepartmentId(final Integer departmentId) {
+        checkIfDepartmentIdIsSetCorrectly(departmentId);
         return employeeRepository.sumSalariesByDepartmentId(departmentId);
     }
 
-    private void checkIfTheEmployeeIdExists(Long employeeId) {
+    private void checkIfEmployeeIdExists(final Long employeeId) {
         if (!employeeRepository.existsById(employeeId)) {
             throw new ResourceNotFoundException(
-                    "Couldn't find employee with id " + employeeId + ".");
+                    "Couldn't find employee with id " + employeeId + "."
+            );
         }
     }
 
-    private Position checkIfThePositionIdIsSetCorrectly(Integer positionId) {
+    private Position checkIfPositionIdIsSetCorrectly(final Integer positionId) {
         return positionRepository.findById(positionId)
                 .orElseThrow(() -> new ResourceNotFoundException(
-                        "Couldn't find position with id " + positionId + ".")
+                                "Couldn't find position with id " + positionId + "."
+                        )
                 );
     }
 
-    private Department checkIfTheDepartmentIdIsSetCorrectly(Integer departmentId) {
+    private Department checkIfDepartmentIdIsSetCorrectly(final Integer departmentId) {
         return departmentRepository.findById(departmentId)
                 .orElseThrow(() -> new ResourceNotFoundException(
-                        "Couldn't find department with id " + departmentId + ".")
+                                "Couldn't find department with id " + departmentId + "."
+                        )
                 );
     }
 
     private void checkIfOrdinalEmployeeDidntTakeDirectorPlace(
-            EmployeeDto dto, Employee director) {
+            final EmployeeDto dto, final Employee director) {
         if (dto.getIsDirector()) {
             throw new InvalidDataException(
                     "The department with id " + dto.getDepartmentId() +
-                    " already has a director.");
+                    " already has a director."
+            );
         }
 
         if (dto.getSalary().compareTo(director.getSalary()) > 0) {
             throw new InvalidDataException(
                     "The employee's salary cannot be higher than the director's salary "
-                    + director.getSalary() + ".");
+                    + director.getSalary() + "."
+            );
         }
     }
 
-    private void checkIfDirectorSalaryIsHigherThanOrdinaryOne(EmployeeDto dto) {
+    private void checkIfDirectorSalaryIsHigherThanOrdinaryOne(final EmployeeDto dto) {
         if (dto.getIsDirector()) {
             var maxSalary = employeeRepository
                     .findMaxSalaryOfNonDirectorByDepartmentId(dto.getDepartmentId());
             if (dto.getSalary().compareTo(maxSalary) < 0) {
                 throw new InvalidDataException(
                         "The director's salary cannot be lower than the employer's salary "
-                        + maxSalary + ".");
+                        + maxSalary + "."
+                );
             }
         }
     }

@@ -6,7 +6,7 @@ import com.rntgroup.service.DepartmentService;
 import com.rntgroup.exception.InvalidDataException;
 import com.rntgroup.exception.InvalidDeletionException;
 import com.rntgroup.exception.ResourceNotFoundException;
-import com.rntgroup.web.dto.DepartmentDto;
+import com.rntgroup.web.dto.department.DepartmentDto;
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.springframework.data.domain.PageRequest;
@@ -18,7 +18,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 @RequiredArgsConstructor
-class DepartmentServiceTest extends IntegrationTestBase {
+class DepartmentServiceIT extends IntegrationTestBase {
     private static final int FIRST_DEPARTMENT_ID = 1;
     private static final String FIRST_DEPARTMENT_NAME = "Департамент финансов и управления";
     private static final int DEPENDENT_DEPARTMENT_ID = 2;

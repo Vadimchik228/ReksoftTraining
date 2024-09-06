@@ -57,7 +57,7 @@ class CorrectPhoneNumberValidatorTest {
                 Arguments.of("+7 916 123 45 67 1", false), // Слишком много цифр
                 Arguments.of("123-456-7890-12", false), // Слишком много дефисов
                 Arguments.of("+1 555 123 45 67", false), // Не российский номер
-                Arguments.of(null, false)
+                Arguments.of(null, true)
         );
     }
 }

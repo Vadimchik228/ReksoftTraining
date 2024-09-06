@@ -1,7 +1,7 @@
 package com.rntgroup.web.dto.validation.validator;
 
-import com.rntgroup.web.dto.EmployeeDto;
 import com.rntgroup.web.dto.validation.annotation.EmploymentDateAfterBirthDate;
+import com.rntgroup.web.dto.employee.EmployeeDto;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import org.springframework.stereotype.Component;
@@ -30,7 +30,7 @@ public class EmploymentDateValidator
                 return false;
             }
         }
-        return true;
 
+        return true;
     }
 }

@@ -6,7 +6,7 @@ import com.rntgroup.service.PositionService;
 import com.rntgroup.exception.InvalidDataException;
 import com.rntgroup.exception.InvalidDeletionException;
 import com.rntgroup.exception.ResourceNotFoundException;
-import com.rntgroup.web.dto.PositionDto;
+import com.rntgroup.web.dto.position.PositionDto;
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.springframework.data.domain.PageRequest;
@@ -17,7 +17,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
 @RequiredArgsConstructor
-class PositionServiceTest extends IntegrationTestBase {
+class PositionServiceIT extends IntegrationTestBase {
     private static final int POSITION_ID = 1;
     private static final int DEPENDENT_POSITION_ID = 2;
     private static final int INDEPENDENT_POSITION_ID = 11;

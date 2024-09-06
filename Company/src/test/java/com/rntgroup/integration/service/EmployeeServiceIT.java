@@ -6,7 +6,7 @@ import com.rntgroup.exception.InvalidDataException;
 import com.rntgroup.exception.ResourceNotFoundException;
 import com.rntgroup.integration.IntegrationTestBase;
 import com.rntgroup.service.EmployeeService;
-import com.rntgroup.web.dto.EmployeeDto;
+import com.rntgroup.web.dto.employee.EmployeeDto;
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.springframework.data.domain.PageRequest;
@@ -19,7 +19,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 @RequiredArgsConstructor
-class EmployeeServiceTest extends IntegrationTestBase {
+class EmployeeServiceIT extends IntegrationTestBase {
     private static final long FIRST_DIRECTOR_ID = 1L;
     private static final String FIRST_DIRECTOR_SALARY = "150000.00";
     private static final int FIRST_DEPARTMENT_ID = 1;

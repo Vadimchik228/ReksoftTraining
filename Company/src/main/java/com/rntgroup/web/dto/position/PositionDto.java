@@ -1,4 +1,4 @@
-package com.rntgroup.web.dto;
+package com.rntgroup.web.dto.position;
 
 import com.rntgroup.web.dto.validation.group.OnCreate;
 import com.rntgroup.web.dto.validation.group.OnUpdate;

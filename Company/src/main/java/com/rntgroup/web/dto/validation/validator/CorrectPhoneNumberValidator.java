@@ -16,16 +16,15 @@ public class CorrectPhoneNumberValidator
 
     @Override
     public boolean isValid(String phoneNumber, ConstraintValidatorContext context) {
-
         if (phoneNumber == null) {
-            return false;
+            return true;
         }
+
         try {
             Phonenumber.PhoneNumber number = phoneUtil.parse(phoneNumber, "RU");
             return phoneUtil.isValidNumber(number);
         } catch (NumberParseException e) {
             return false;
         }
-
     }
 }

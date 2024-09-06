@@ -12,6 +12,12 @@
 				{
 					"name": "Get position",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": "localhost:8080/api/v1/positions/1"
@@ -21,6 +27,12 @@
 				{
 					"name": "Get all positions",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": "localhost:8080/api/v1/positions"
@@ -30,6 +42,12 @@
 				{
 					"name": "Create position",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -48,6 +66,12 @@
 				{
 					"name": "Update position",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -66,9 +90,15 @@
 				{
 					"name": "Delete position",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "DELETE",
 						"header": [],
-						"url": "localhost:8080/api/v1/positions/11"
+						"url": "localhost:8080/api/v1/positions/12"
 					},
 					"response": []
 				}
@@ -80,6 +110,12 @@
 				{
 					"name": "Get employee",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": "localhost:8080/api/v1/employees/1"
@@ -89,6 +125,12 @@
 				{
 					"name": "Get director",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": "localhost:8080/api/v1/employees/2/director"
@@ -98,6 +140,12 @@
 				{
 					"name": "Get all",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": "localhost:8080/api/v1/employees/3/employees"
@@ -107,11 +155,17 @@
 				{
 					"name": "Create employee",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"lastName\": \"Вадимов\",\r\n    \"firstName\": \"Вадим\",\r\n    \"patronymic\": \"Вадимович\",\r\n    \"sex\": \"MALE\",\r\n    \"birthDate\": \"2003-11-04\",\r\n    \"phoneNumber\": \"+7 (495) 456-45-30\",\r\n    \"employmentDate\": \"2024-09-12\",\r\n    \"dismissalDate\": null,\r\n    \"positionId\": 4,\r\n    \"salary\": 100000.00,\r\n    \"isDirector\": false,\r\n    \"departmentId\": 1\r\n}",
+							"raw": "{\r\n    \"lastName\": \"вадимов\",\r\n    \"firstName\": \"Вадим\",\r\n    \"patronymic\": \"Вадимович\",\r\n    \"sex\": \"MALE\",\r\n    \"birthDate\": \"2003-11-04\",\r\n    \"phoneNumber\": \"+7 (495) 456-45-30\",\r\n    \"employmentDate\": \"2024-09-12\",\r\n    \"dismissalDate\": null,\r\n    \"positionId\": 4,\r\n    \"salary\": 100000.00,\r\n    \"isDirector\": false,\r\n    \"departmentId\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -125,11 +179,17 @@
 				{
 					"name": "Update employee",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 20,\r\n    \"lastName\": \"Щебетовский\",\r\n    \"firstName\": \"Вадим\",\r\n    \"patronymic\": \"Александрович\",\r\n    \"sex\": \"MALE\",\r\n    \"birthDate\": \"2003-11-04\",\r\n    \"phoneNumber\": \"+7 (495) 456-45-30\",\r\n    \"employmentDate\": \"2024-09-12\",\r\n    \"dismissalDate\": null,\r\n    \"positionId\": 4,\r\n    \"salary\": 1000000.00,\r\n    \"isDirector\": true,\r\n    \"departmentId\": 5\r\n}",
+							"raw": "{\r\n    \"id\": 11,\r\n    \"lastName\": \"Борисов\",\r\n    \"firstName\": \"Александр\",\r\n    \"patronymic\": \"Николаевич\",\r\n    \"sex\": \"MALE\",\r\n    \"birthDate\": \"2000-07-01\",\r\n    \"phoneNumber\": \"+7 (950) 133-45-67\",\r\n    \"employmentDate\": \"2023-07-01\",\r\n    \"dismissalDate\": null,\r\n    \"positionId\": 8,\r\n    \"salary\": 110000.00,\r\n    \"isDirector\": true,\r\n    \"departmentId\": 3\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -143,6 +203,12 @@
 				{
 					"name": "Delete employee",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": "localhost:8080/api/v1/employees/20"
@@ -155,6 +221,12 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -173,6 +245,12 @@
 				{
 					"name": "Get salary fund",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": "localhost:8080/api/v1/employees/1/salaryFund"
@@ -187,6 +265,12 @@
 				{
 					"name": "Get department",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": "localhost:8080/api/v1/departments/2"
@@ -196,6 +280,12 @@
 				{
 					"name": "Get department by name",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": "localhost:8080/api/v1/departments/name/Департамент финансов и управления"
@@ -214,11 +304,17 @@
 				{
 					"name": "Create department",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Департамент название которого я не придумал2\",\r\n    \"creationDate\": \"2023-08-10\",\r\n    \"parentDepartmentId\": null\r\n}",
+							"raw": "{\r\n    \"name\": \"Департамент название которого я не придумал3\",\r\n    \"creationDate\": \"2023-08-10\",\r\n    \"parentDepartmentId\": null\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -232,11 +328,17 @@
 				{
 					"name": "Update department",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Департамент название которого я не придумал4\",\r\n    \"creationDate\": \"2023-08-10\",\r\n    \"parentDepartmentId\": 3\r\n}",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Департамент управления проектами\",\r\n    \"creationDate\": \"2023-05-01\",\r\n    \"parentDepartmentId\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -250,11 +352,17 @@
 				{
 					"name": "Delete department",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
 						"method": "DELETE",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Департамент название которого я не придумал4\",\r\n    \"creationDate\": \"2023-08-10\",\r\n    \"parentDepartmentId\": 3\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -262,6 +370,106 @@
 							}
 						},
 						"url": "localhost:8080/api/v1/departments/6"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"schebetovskiyvadim@gmail.com\",\r\n    \"password\": \"123vadim!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"vadim\",\r\n    \"username\" : \"vadim@gmail.com\",\r\n    \"password\" : \"123vadim!\",\r\n    \"passwordConfirmation\" : \"123vadim!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/auth/register"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Get user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/v1/users/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Mike Nawoz\",\r\n    \"username\": \"mikewazowski@yahoo.com\",\r\n    \"password\": \"111mmm!\",\r\n    \"passwordConfirmation\": \"111mmm!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzY2hlYmV0b3Zza2l5dmFkaW1AZ21haWwuY29tIiwiaWQiOjEsInJvbGVzIjpbIkFETUlOIiwiVVNFUiJdLCJleHAiOjE3MjUzMzY3MDd9.ix_jWBQOGNIcLTsQyDMxTK81kZSn-YtdTnQ_Y2tsSGR_XhT-DnS5mKjGjW_8zt5RxvdH_poXt3PHGpZK8xCihw"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/api/v1/users/3"
 					},
 					"response": []
 				}

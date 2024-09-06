@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @Builder
 @Entity
 @Table(name = "employee")
-public class Employee implements BaseEntity<Long> {
+public class Employee extends AuditingEntity<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -11,12 +11,13 @@ import org.testcontainers.containers.PostgreSQLContainer;
 @Sql(scripts = {
         "classpath:sql/department-data.sql",
         "classpath:sql/position-data.sql",
-        "classpath:sql/employee-data.sql"
+        "classpath:sql/employee-data.sql",
+        "classpath:sql/users-data.sql"
 })
 public abstract class IntegrationTestBase {
-
     private static final PostgreSQLContainer<?> container = new PostgreSQLContainer<>(
-            "postgres");
+            "postgres"
+    );
 
     @BeforeAll
     static void runContainer() {

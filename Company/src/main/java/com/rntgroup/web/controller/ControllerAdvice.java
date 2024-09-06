@@ -2,15 +2,13 @@ package com.rntgroup.web.controller;
 
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
-import com.rntgroup.exception.ExceptionBody;
-import com.rntgroup.exception.InvalidDataException;
-import com.rntgroup.exception.InvalidDeletionException;
-import com.rntgroup.exception.ResourceNotFoundException;
+import com.rntgroup.exception.*;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -94,6 +92,23 @@ public class ControllerAdvice {
 
         log.info(e.getMessage());
         return exceptionBody;
+    }
+
+    @ExceptionHandler(AuthenticationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ExceptionBody handleAuthentication(final AuthenticationException e) {
+        log.info(e.getMessage());
+        return new ExceptionBody("Authentication failed.");
+    }
+
+    @ExceptionHandler({
+            AccessDeniedException.class,
+            org.springframework.security.access.AccessDeniedException.class
+    })
+    @ResponseStatus(HttpStatus.FORBIDDEN)
+    public ExceptionBody handleAccessDenied() {
+        log.info("Access denied.");
+        return new ExceptionBody("Access denied.");
     }
 
     @ExceptionHandler(Exception.class)

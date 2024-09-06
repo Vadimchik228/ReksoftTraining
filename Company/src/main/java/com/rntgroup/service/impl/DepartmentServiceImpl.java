@@ -5,7 +5,7 @@ import com.rntgroup.exception.InvalidDataException;
 import com.rntgroup.exception.InvalidDeletionException;
 import com.rntgroup.exception.ResourceNotFoundException;
 import com.rntgroup.service.DepartmentService;
-import com.rntgroup.web.dto.DepartmentDto;
+import com.rntgroup.web.dto.department.DepartmentDto;
 import com.rntgroup.web.mapper.DepartmentMapper;
 import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
@@ -29,36 +29,39 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     @Transactional(readOnly = true)
-    public DepartmentDto getById(Integer id) {
+    public DepartmentDto getById(final Integer id) {
         return departmentRepository.findById(id)
                 .map(departmentMapper::toDto)
                 .orElseThrow(() -> new ResourceNotFoundException(
-                        "Couldn't find department with id " + id + "."));
+                                "Couldn't find department with id " + id + "."
+                        )
+                );
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<DepartmentDto> getByName(String name) {
+    public Optional<DepartmentDto> getByName(final String name) {
         return departmentRepository.findByName(name)
                 .map(departmentMapper::toDto);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Page<DepartmentDto> getAll(Pageable pageable) {
+    public Page<DepartmentDto> getAll(final Pageable pageable) {
         return departmentRepository.findAllByDepartmentHierarchy(pageable)
                 .map(departmentMapper::toDto);
     }
 
     @Override
-    public DepartmentDto update(DepartmentDto dto) {
-        checkIfTheDepartmentIdExists(dto.getId());
+    public DepartmentDto update(final DepartmentDto dto) {
+        checkIfDepartmentIdExists(dto.getId());
 
         var parentId = dto.getParentDepartmentId();
         if (parentId != null) {
             if (!departmentRepository.existsById(parentId)) {
                 throw new ResourceNotFoundException(
-                        "Couldn't find parent department with id " + parentId + ".");
+                        "Couldn't find parent department with id " + parentId + "."
+                );
             }
         }
 
@@ -72,7 +75,8 @@ public class DepartmentServiceImpl implements DepartmentService {
             return dto;
         } catch (DataIntegrityViolationException ex) {
             throw new InvalidDataException(
-                    "There is already department with name " + dto.getName() + ".");
+                    "There is already department with name " + dto.getName() + "."
+            );
         }
     }
 
@@ -82,7 +86,8 @@ public class DepartmentServiceImpl implements DepartmentService {
         if (parentId != null) {
             if (!departmentRepository.existsById(parentId)) {
                 throw new ResourceNotFoundException(
-                        "Couldn't find parent department with id " + parentId + ".");
+                        "Couldn't find parent department with id " + parentId + "."
+                );
             }
         }
 
@@ -97,13 +102,14 @@ public class DepartmentServiceImpl implements DepartmentService {
             return dto;
         } catch (DataIntegrityViolationException ex) {
             throw new InvalidDataException(
-                    "There is already department with name " + dto.getName() + ".");
+                    "There is already department with name " + dto.getName() + "."
+            );
         }
     }
 
     @Override
-    public void delete(Integer id) {
-        checkIfTheDepartmentIdExists(id);
+    public void delete(final Integer id) {
+        checkIfDepartmentIdExists(id);
 
         try {
             departmentRepository.deleteById(id);
@@ -111,14 +117,16 @@ public class DepartmentServiceImpl implements DepartmentService {
         } catch (ConstraintViolationException ex) {
             throw new InvalidDeletionException(
                     "Couldn't delete department with id " + id + "." +
-                    " The department still has employees.");
+                    " The department still has employees."
+            );
         }
     }
 
-    private void checkIfTheDepartmentIdExists(Integer departmentId) {
+    private void checkIfDepartmentIdExists(final Integer departmentId) {
         if (!departmentRepository.existsById(departmentId)) {
             throw new ResourceNotFoundException(
-                    "Couldn't find department with id " + departmentId + ".");
+                    "Couldn't find department with id " + departmentId + "."
+            );
         }
     }
 

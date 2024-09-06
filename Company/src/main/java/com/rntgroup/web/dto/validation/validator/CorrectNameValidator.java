@@ -17,8 +17,8 @@ public class CorrectNameValidator implements ConstraintValidator<CorrectName, St
         if (name == null) {
             return true;
         }
+
         String trimName = name.trim();
         return trimName.isEmpty() || Pattern.matches(REGEX, trimName);
-
     }
 }
