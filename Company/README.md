@@ -11,7 +11,7 @@
 
 1. Откройте файл _db/changelog/db.changelog-master.yaml_, лежащий в _resources/db/changelog_;
 2. Удалите или закомментируйте строки, которые включают:
-   - _db/changelog/db.changelog-1.1.sql_;
-   - _db/changelog/db.changelog-1.2.sql_;
-   - _db/changelog/db.changelog-2.2.sql_;
-   - _db/changelog/db.changelog-2.3.sql_.
+   - _db/changelog/db.changelog-1.4.sql_;
+   - _db/changelog/db.changelog-1.5.sql_;
+   - _db/changelog/db.changelog-2.1.sql_;
+   - _db/changelog/db.changelog-2.2.sql_.

@@ -1,8 +1,11 @@
--- --liquibase formatted sql
+--liquibase formatted sql
 
--- --changeset rntgroup:1
-ALTER SEQUENCE department_id_seq RESTART WITH 7;
-
-ALTER SEQUENCE position_id_seq RESTART WITH 12;
-
-ALTER SEQUENCE employee_id_seq RESTART WITH 20;
+--changeset rntgroup:1
+CREATE TABLE IF NOT EXISTS department_payroll
+(
+    id            BIGSERIAL PRIMARY KEY,
+    department_id INTEGER        NOT NULL REFERENCES department (id) ON DELETE CASCADE,
+    salary_fund   DECIMAL(15, 2) NOT NULL,
+    timestamp     TIMESTAMP      NOT NULL
+);
+--rollback DROP TABLE department_payroll;

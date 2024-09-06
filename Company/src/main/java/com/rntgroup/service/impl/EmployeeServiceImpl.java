@@ -116,14 +116,16 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Transactional(readOnly = true)
     public Long countAllByDepartmentId(final Integer departmentId) {
         checkIfDepartmentIdIsSetCorrectly(departmentId);
-        return employeeRepository.countAllByDepartmentId(departmentId);
+        var employeesCount = employeeRepository.countAllByDepartmentId(departmentId);
+        return employeesCount == null ? 0L : employeesCount;
     }
 
     @Override
     @Transactional(readOnly = true)
     public BigDecimal sumSalariesByDepartmentId(final Integer departmentId) {
         checkIfDepartmentIdIsSetCorrectly(departmentId);
-        return employeeRepository.sumSalariesByDepartmentId(departmentId);
+        var salaryFund = employeeRepository.sumSalariesByDepartmentId(departmentId);
+        return salaryFund == null ? BigDecimal.ZERO : salaryFund;
     }
 
     private void checkIfEmployeeIdExists(final Long employeeId) {

@@ -256,8 +256,11 @@ class EmployeeServiceIT extends IntegrationTestBase {
 
     @Test
     void countAllByDepartmentId() {
-        Long count = employeeService.countAllByDepartmentId(FIRST_DEPARTMENT_ID);
+        Long count = employeeService.countAllByDepartmentId(1);
         assertThat(count).isEqualTo(6L);
+
+        count = employeeService.countAllByDepartmentId(6);
+        assertThat(count).isEqualTo(0L);
     }
 
     @Test
@@ -272,9 +275,11 @@ class EmployeeServiceIT extends IntegrationTestBase {
 
     @Test
     void sumSalariesByDepartmentId() {
-        BigDecimal sumSalaries = employeeService.sumSalariesByDepartmentId(
-                FIRST_DEPARTMENT_ID);
+        BigDecimal sumSalaries = employeeService.sumSalariesByDepartmentId(1);
         assertThat(sumSalaries).isEqualTo(new BigDecimal("515000.00"));
+
+        sumSalaries = employeeService.sumSalariesByDepartmentId(6);
+        assertThat(sumSalaries).isEqualTo(BigDecimal.ZERO);
     }
 
     @Test

@@ -1,0 +1,708 @@
+2024-09-07 01:33:53 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-07 01:33:53 INFO  com.rntgroup.ApplicationRunner - Starting ApplicationRunner using Java 21 with PID 25456 (C:\Users\Vadim\Desktop\Company\target\classes started by Vadim in C:\Users\Vadim\Desktop\Company)
+2024-09-07 01:33:53 INFO  com.rntgroup.ApplicationRunner - No active profile set, falling back to 1 default profile: "default"
+2024-09-07 01:33:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-07 01:33:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 5 JPA repository interfaces.
+2024-09-07 01:33:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-07 01:33:54 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-07 01:33:54 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-07 01:33:54 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-09-07 01:33:54 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-07 01:33:54 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1369 ms
+2024-09-07 01:33:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-07 01:33:54 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@16ac4d3d
+2024-09-07 01:33:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-07 01:33:54 INFO  liquibase.database - Set default schema name to public
+2024-09-07 01:33:55 INFO  liquibase.changelog - Creating database history table with name: public.databasechangelog
+2024-09-07 01:33:55 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 01:33:55 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-09-07 01:33:55 INFO  liquibase.command - Using deploymentId: 5662035281
+2024-09-07 01:33:55 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 01:33:55 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::1::rntgroup
+2024-09-07 01:33:55 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:33:55 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::1::rntgroup ran successfully in 22ms
+2024-09-07 01:33:55 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::2::rntgroup
+2024-09-07 01:33:55 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:33:55 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::2::rntgroup ran successfully in 12ms
+2024-09-07 01:33:55 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::3::rntgroup
+2024-09-07 01:33:55 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:33:55 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::3::rntgroup ran successfully in 9ms
+2024-09-07 01:33:55 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.2.sql::1::rntgroup
+2024-09-07 01:33:55 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:33:55 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.2.sql::1::rntgroup ran successfully in 6ms
+2024-09-07 01:33:55 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.3.sql::1::rntgroup
+2024-09-07 01:33:55 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:33:55 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.3.sql::1::rntgroup ran successfully in 6ms
+2024-09-07 01:33:55 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.0.sql::1::rntgroup
+2024-09-07 01:33:55 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:33:55 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.0.sql::1::rntgroup ran successfully in 10ms
+2024-09-07 01:33:55 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.0.sql::2::rntgroup
+2024-09-07 01:33:55 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:33:55 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.0.sql::2::rntgroup ran successfully in 7ms
+2024-09-07 01:33:55 INFO  liquibase.util - UPDATE SUMMARY
+2024-09-07 01:33:55 INFO  liquibase.util - Run:                          7
+2024-09-07 01:33:55 INFO  liquibase.util - Previously run:               0
+2024-09-07 01:33:55 INFO  liquibase.util - Filtered out:                 0
+2024-09-07 01:33:55 INFO  liquibase.util - -------------------------------
+2024-09-07 01:33:55 INFO  liquibase.util - Total change sets:            7
+2024-09-07 01:33:55 INFO  liquibase.util - Update summary generated
+2024-09-07 01:33:55 INFO  liquibase.command - Update command completed successfully.
+2024-09-07 01:33:55 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 7
+2024-09-07 01:33:55 INFO  liquibase.lockservice - Successfully released change log lock
+2024-09-07 01:33:55 INFO  liquibase.command - Command execution complete
+2024-09-07 01:33:55 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-07 01:33:55 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-09-07 01:33:55 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-07 01:33:55 INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2024-09-07 01:33:55 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-07 01:33:55 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.rntgroup.database.entity.Department
+2024-09-07 01:33:56 WARN  o.h.b.i.SessionFactoryOptionsBuilder - Unrecognized hibernate.hbm2ddl.auto value: 'validation'.  Supported values include 'create', 'create-drop', 'create-only', 'drop', 'update', 'none' and 'validate'.  Ignoring
+2024-09-07 01:33:56 ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: Unrecognized 'hibernate.hbm2ddl.auto' setting: 'validation'
+2024-09-07 01:33:56 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: Unrecognized 'hibernate.hbm2ddl.auto' setting: 'validation'
+2024-09-07 01:33:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-07 01:33:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-07 01:33:56 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-09-07 01:33:56 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-07 01:33:56 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: Unrecognized 'hibernate.hbm2ddl.auto' setting: 'validation'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.rntgroup.ApplicationRunner.main(ApplicationRunner.java:11)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: Unrecognized 'hibernate.hbm2ddl.auto' setting: 'validation'
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 16 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Unrecognized 'hibernate.hbm2ddl.auto' setting: 'validation'
+	at org.hibernate.tool.schema.Action.interpretHbm2ddlSetting(Action.java:305)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator$ActionGrouping.determineAutoSettingImpliedAction(SchemaManagementToolCoordinator.java:727)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator$ActionGrouping.interpret(SchemaManagementToolCoordinator.java:735)
+	at org.hibernate.boot.internal.MetadataImpl.shouldOrderTableColumns(MetadataImpl.java:468)
+	at org.hibernate.boot.internal.MetadataImpl.orderColumns(MetadataImpl.java:400)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:272)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+2024-09-07 01:34:33 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-07 01:34:33 INFO  com.rntgroup.ApplicationRunner - Starting ApplicationRunner using Java 21 with PID 23572 (C:\Users\Vadim\Desktop\Company\target\classes started by Vadim in C:\Users\Vadim\Desktop\Company)
+2024-09-07 01:34:33 INFO  com.rntgroup.ApplicationRunner - No active profile set, falling back to 1 default profile: "default"
+2024-09-07 01:34:34 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-07 01:34:34 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 5 JPA repository interfaces.
+2024-09-07 01:34:35 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-07 01:34:35 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-07 01:34:35 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-07 01:34:35 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-09-07 01:34:35 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-07 01:34:35 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1370 ms
+2024-09-07 01:34:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-07 01:34:35 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4a6a6a69
+2024-09-07 01:34:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-07 01:34:35 INFO  liquibase.database - Set default schema name to public
+2024-09-07 01:34:35 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 01:34:35 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-09-07 01:34:35 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 01:34:35 INFO  liquibase.util - UPDATE SUMMARY
+2024-09-07 01:34:35 INFO  liquibase.util - Run:                          0
+2024-09-07 01:34:35 INFO  liquibase.util - Previously run:               7
+2024-09-07 01:34:35 INFO  liquibase.util - Filtered out:                 0
+2024-09-07 01:34:35 INFO  liquibase.util - -------------------------------
+2024-09-07 01:34:35 INFO  liquibase.util - Total change sets:            7
+2024-09-07 01:34:35 INFO  liquibase.util - Update summary generated
+2024-09-07 01:34:35 INFO  liquibase.lockservice - Successfully released change log lock
+2024-09-07 01:34:35 INFO  liquibase.command - Command execution complete
+2024-09-07 01:34:35 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-07 01:34:35 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-09-07 01:34:35 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-07 01:34:35 INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2024-09-07 01:34:36 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-07 01:34:36 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.rntgroup.database.entity.Department
+2024-09-07 01:34:36 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-07 01:34:37 ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [department_aud]
+2024-09-07 01:34:37 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [department_aud]
+2024-09-07 01:34:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-07 01:34:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-07 01:34:37 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-09-07 01:34:37 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-07 01:34:37 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [department_aud]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.rntgroup.ApplicationRunner.main(ApplicationRunner.java:11)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [department_aud]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 16 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [department_aud]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:134)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:97)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:75)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:295)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+2024-09-07 01:36:32 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-07 01:36:32 INFO  com.rntgroup.ApplicationRunner - Starting ApplicationRunner using Java 21 with PID 27424 (C:\Users\Vadim\Desktop\Company\target\classes started by Vadim in C:\Users\Vadim\Desktop\Company)
+2024-09-07 01:36:32 INFO  com.rntgroup.ApplicationRunner - No active profile set, falling back to 1 default profile: "default"
+2024-09-07 01:36:33 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-07 01:36:33 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 5 JPA repository interfaces.
+2024-09-07 01:36:34 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-07 01:36:34 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-07 01:36:34 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-07 01:36:34 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-09-07 01:36:34 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-07 01:36:34 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1389 ms
+2024-09-07 01:36:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-07 01:36:34 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@559d19c
+2024-09-07 01:36:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-07 01:36:34 INFO  liquibase.database - Set default schema name to public
+2024-09-07 01:36:34 INFO  liquibase.changelog - Creating database history table with name: public.databasechangelog
+2024-09-07 01:36:34 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 01:36:35 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-09-07 01:36:35 INFO  liquibase.command - Using deploymentId: 5662195045
+2024-09-07 01:36:35 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::1::rntgroup
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::1::rntgroup ran successfully in 22ms
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::2::rntgroup
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::2::rntgroup ran successfully in 12ms
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::3::rntgroup
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::3::rntgroup ran successfully in 10ms
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.1.sql::1::rntgroup
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.1.sql::1::rntgroup ran successfully in 8ms
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.1.sql::2::rntgroup
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.1.sql::2::rntgroup ran successfully in 11ms
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.2.sql::1::rntgroup
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.2.sql::1::rntgroup ran successfully in 6ms
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.3.sql::1::rntgroup
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.3.sql::1::rntgroup ran successfully in 6ms
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.4.sql::1::rntgroup
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.4.sql::1::rntgroup ran successfully in 15ms
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.5.sql::raw::includeAll
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.5.sql::raw::includeAll ran successfully in 7ms
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.0.sql::1::rntgroup
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.0.sql::1::rntgroup ran successfully in 11ms
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.0.sql::2::rntgroup
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.0.sql::2::rntgroup ran successfully in 6ms
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.1.sql::1::rntgroup
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.1.sql::1::rntgroup ran successfully in 5ms
+2024-09-07 01:36:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.2.sql::raw::includeAll
+2024-09-07 01:36:35 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:36:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.2.sql::raw::includeAll ran successfully in 3ms
+2024-09-07 01:36:35 INFO  liquibase.util - UPDATE SUMMARY
+2024-09-07 01:36:35 INFO  liquibase.util - Run:                         13
+2024-09-07 01:36:35 INFO  liquibase.util - Previously run:               0
+2024-09-07 01:36:35 INFO  liquibase.util - Filtered out:                 0
+2024-09-07 01:36:35 INFO  liquibase.util - -------------------------------
+2024-09-07 01:36:35 INFO  liquibase.util - Total change sets:           13
+2024-09-07 01:36:35 INFO  liquibase.util - Update summary generated
+2024-09-07 01:36:35 INFO  liquibase.command - Update command completed successfully.
+2024-09-07 01:36:35 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 54
+2024-09-07 01:36:35 INFO  liquibase.lockservice - Successfully released change log lock
+2024-09-07 01:36:35 INFO  liquibase.command - Command execution complete
+2024-09-07 01:36:35 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-07 01:36:35 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-09-07 01:36:35 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-07 01:36:35 INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2024-09-07 01:36:35 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-07 01:36:35 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.rntgroup.database.entity.Department
+2024-09-07 01:36:36 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-07 01:36:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 01:36:36 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-07 01:36:37 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-07 01:36:37 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2eef2fd6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@705448e7, org.springframework.security.web.context.SecurityContextHolderFilter@22457838, org.springframework.security.web.header.HeaderWriterFilter@4395bc43, org.springframework.security.web.authentication.logout.LogoutFilter@4785f176, com.rntgroup.web.security.JwtTokenFilter@2f3809cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@297727ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47585784, org.springframework.security.web.session.SessionManagementFilter@24df8abf, org.springframework.security.web.access.ExceptionTranslationFilter@394642e5, org.springframework.security.web.access.intercept.AuthorizationFilter@281edf6b]
+2024-09-07 01:36:37 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-09-07 01:36:37 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-07 01:36:37 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-09-07 01:36:37 INFO  com.rntgroup.ApplicationRunner - Started ApplicationRunner in 5.421 seconds (process running for 5.837)
+2024-09-07 01:36:59 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 01:36:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-07 01:36:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-07 01:37:38 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-07 01:37:38 INFO  com.rntgroup.ApplicationRunner - Starting ApplicationRunner using Java 21 with PID 27492 (C:\Users\Vadim\Desktop\Company\target\classes started by Vadim in C:\Users\Vadim\Desktop\Company)
+2024-09-07 01:37:38 INFO  com.rntgroup.ApplicationRunner - No active profile set, falling back to 1 default profile: "default"
+2024-09-07 01:37:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-07 01:37:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 5 JPA repository interfaces.
+2024-09-07 01:37:39 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-07 01:37:39 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-07 01:37:39 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-07 01:37:39 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-09-07 01:37:39 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-07 01:37:39 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1401 ms
+2024-09-07 01:37:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-07 01:37:40 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1c2d63f0
+2024-09-07 01:37:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-07 01:37:40 INFO  liquibase.database - Set default schema name to public
+2024-09-07 01:37:40 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 01:37:40 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-09-07 01:37:40 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 01:37:40 INFO  liquibase.util - UPDATE SUMMARY
+2024-09-07 01:37:40 INFO  liquibase.util - Run:                          0
+2024-09-07 01:37:40 INFO  liquibase.util - Previously run:              13
+2024-09-07 01:37:40 INFO  liquibase.util - Filtered out:                 0
+2024-09-07 01:37:40 INFO  liquibase.util - -------------------------------
+2024-09-07 01:37:40 INFO  liquibase.util - Total change sets:           13
+2024-09-07 01:37:40 INFO  liquibase.util - Update summary generated
+2024-09-07 01:37:40 INFO  liquibase.lockservice - Successfully released change log lock
+2024-09-07 01:37:40 INFO  liquibase.command - Command execution complete
+2024-09-07 01:37:40 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-07 01:37:40 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-09-07 01:37:40 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-07 01:37:40 INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2024-09-07 01:37:40 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-07 01:37:41 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.rntgroup.database.entity.Department
+2024-09-07 01:37:41 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-07 01:37:41 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 01:37:42 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-07 01:37:42 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-07 01:37:42 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6cee8f5d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20a46430, org.springframework.security.web.context.SecurityContextHolderFilter@79ec9d81, org.springframework.security.web.header.HeaderWriterFilter@1c9f274d, org.springframework.security.web.authentication.logout.LogoutFilter@3949fcdc, com.rntgroup.web.security.JwtTokenFilter@68b70470, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4acdc330, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24841b02, org.springframework.security.web.session.SessionManagementFilter@38ffec31, org.springframework.security.web.access.ExceptionTranslationFilter@245a06f4, org.springframework.security.web.access.intercept.AuthorizationFilter@5b82e090]
+2024-09-07 01:37:43 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-09-07 01:37:43 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-07 01:37:43 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-09-07 01:37:43 INFO  com.rntgroup.ApplicationRunner - Started ApplicationRunner in 5.464 seconds (process running for 5.922)
+2024-09-07 01:38:22 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-07 01:38:22 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-07 01:38:22 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-09-07 01:39:03 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-09-07 01:39:03 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: значение NULL в столбце "creation_date" отношения "department_aud" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (6, 2, 2, null, null, null).
+2024-09-07 01:39:03 ERROR c.r.web.controller.ControllerAdvice - could not execute statement [ОШИБКА: значение NULL в столбце "creation_date" отношения "department_aud" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (6, 2, 2, null, null, null).] [insert into department_aud (revtype,creation_date,name,parent_department_id,rev,id) values (?,?,?,?,?,?)]; SQL [insert into department_aud (revtype,creation_date,name,parent_department_id,rev,id) values (?,?,?,?,?,?)]; constraint [null]
+2024-09-07 01:40:12 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 01:40:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-07 01:40:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-07 01:43:48 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-07 01:43:48 INFO  com.rntgroup.ApplicationRunner - Starting ApplicationRunner using Java 21 with PID 27460 (C:\Users\Vadim\Desktop\Company\target\classes started by Vadim in C:\Users\Vadim\Desktop\Company)
+2024-09-07 01:43:48 INFO  com.rntgroup.ApplicationRunner - No active profile set, falling back to 1 default profile: "default"
+2024-09-07 01:43:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-07 01:43:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 5 JPA repository interfaces.
+2024-09-07 01:43:50 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-07 01:43:50 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-07 01:43:50 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-07 01:43:50 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-09-07 01:43:50 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-07 01:43:50 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1492 ms
+2024-09-07 01:43:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-07 01:43:50 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@16ac4d3d
+2024-09-07 01:43:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-07 01:43:50 INFO  liquibase.database - Set default schema name to public
+2024-09-07 01:43:51 INFO  liquibase.changelog - Creating database history table with name: public.databasechangelog
+2024-09-07 01:43:51 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 01:43:51 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-09-07 01:43:51 INFO  liquibase.command - Using deploymentId: 5662631361
+2024-09-07 01:43:51 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::1::rntgroup
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::1::rntgroup ran successfully in 26ms
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::2::rntgroup
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::2::rntgroup ran successfully in 12ms
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::3::rntgroup
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::3::rntgroup ran successfully in 9ms
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.1.sql::1::rntgroup
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.1.sql::1::rntgroup ran successfully in 6ms
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.1.sql::2::rntgroup
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.1.sql::2::rntgroup ran successfully in 11ms
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.2.sql::1::rntgroup
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.2.sql::1::rntgroup ran successfully in 7ms
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.3.sql::1::rntgroup
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.3.sql::1::rntgroup ran successfully in 8ms
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.4.sql::1::rntgroup
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.4.sql::1::rntgroup ran successfully in 17ms
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.5.sql::raw::includeAll
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.5.sql::raw::includeAll ran successfully in 6ms
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.0.sql::1::rntgroup
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.0.sql::1::rntgroup ran successfully in 11ms
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.0.sql::2::rntgroup
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.0.sql::2::rntgroup ran successfully in 5ms
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.1.sql::1::rntgroup
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.1.sql::1::rntgroup ran successfully in 6ms
+2024-09-07 01:43:51 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.2.sql::raw::includeAll
+2024-09-07 01:43:51 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 01:43:51 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.2.sql::raw::includeAll ran successfully in 4ms
+2024-09-07 01:43:51 INFO  liquibase.util - UPDATE SUMMARY
+2024-09-07 01:43:51 INFO  liquibase.util - Run:                         13
+2024-09-07 01:43:51 INFO  liquibase.util - Previously run:               0
+2024-09-07 01:43:51 INFO  liquibase.util - Filtered out:                 0
+2024-09-07 01:43:51 INFO  liquibase.util - -------------------------------
+2024-09-07 01:43:51 INFO  liquibase.util - Total change sets:           13
+2024-09-07 01:43:51 INFO  liquibase.util - Update summary generated
+2024-09-07 01:43:51 INFO  liquibase.command - Update command completed successfully.
+2024-09-07 01:43:51 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 54
+2024-09-07 01:43:51 INFO  liquibase.lockservice - Successfully released change log lock
+2024-09-07 01:43:51 INFO  liquibase.command - Command execution complete
+2024-09-07 01:43:51 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-07 01:43:51 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-09-07 01:43:51 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-07 01:43:51 INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2024-09-07 01:43:52 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-07 01:43:52 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.rntgroup.database.entity.Department
+2024-09-07 01:43:53 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-07 01:43:53 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 01:43:53 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-07 01:43:54 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-07 01:43:54 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@93370c5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@686ae6b3, org.springframework.security.web.context.SecurityContextHolderFilter@72c9576a, org.springframework.security.web.header.HeaderWriterFilter@1a44d89b, org.springframework.security.web.authentication.logout.LogoutFilter@5083642c, com.rntgroup.web.security.JwtTokenFilter@48c74c4f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@861bc5f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6087f264, org.springframework.security.web.session.SessionManagementFilter@43a34f02, org.springframework.security.web.access.ExceptionTranslationFilter@e8fabad, org.springframework.security.web.access.intercept.AuthorizationFilter@7b83476f]
+2024-09-07 01:43:54 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-09-07 01:43:54 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-07 01:43:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-09-07 01:43:54 INFO  com.rntgroup.ApplicationRunner - Started ApplicationRunner in 6.314 seconds (process running for 6.938)
+2024-09-07 01:44:02 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-07 01:44:02 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-07 01:44:02 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-09-07 01:44:28 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-09-07 01:44:28 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: значение NULL в столбце "creation_date" отношения "department_aud" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (6, 2, 2, null, null, null).
+2024-09-07 01:44:28 ERROR c.r.web.controller.ControllerAdvice - could not execute statement [ОШИБКА: значение NULL в столбце "creation_date" отношения "department_aud" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (6, 2, 2, null, null, null).] [insert into department_aud (revtype,creation_date,name,parent_department_id,rev,id) values (?,?,?,?,?,?)]; SQL [insert into department_aud (revtype,creation_date,name,parent_department_id,rev,id) values (?,?,?,?,?,?)]; constraint [null]
+2024-09-07 01:44:31 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 01:44:31 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-07 01:44:31 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-07 01:54:22 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-07 01:54:22 INFO  com.rntgroup.ApplicationRunner - Starting ApplicationRunner using Java 21 with PID 28120 (C:\Users\Vadim\Desktop\Company\target\classes started by Vadim in C:\Users\Vadim\Desktop\Company)
+2024-09-07 01:54:22 INFO  com.rntgroup.ApplicationRunner - No active profile set, falling back to 1 default profile: "default"
+2024-09-07 01:54:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-07 01:54:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+2024-09-07 01:54:23 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-07 01:54:23 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-07 01:54:23 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-07 01:54:23 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-09-07 01:54:23 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-07 01:54:23 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1524 ms
+2024-09-07 01:54:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-07 01:54:24 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1c2d63f0
+2024-09-07 01:54:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-07 01:54:24 INFO  liquibase.database - Set default schema name to public
+2024-09-07 01:54:24 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 01:54:24 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-09-07 01:54:24 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 01:54:24 INFO  liquibase.util - UPDATE SUMMARY
+2024-09-07 01:54:24 INFO  liquibase.util - Run:                          0
+2024-09-07 01:54:24 INFO  liquibase.util - Previously run:              13
+2024-09-07 01:54:24 INFO  liquibase.util - Filtered out:                 0
+2024-09-07 01:54:24 INFO  liquibase.util - -------------------------------
+2024-09-07 01:54:24 INFO  liquibase.util - Total change sets:           13
+2024-09-07 01:54:24 INFO  liquibase.util - Update summary generated
+2024-09-07 01:54:24 INFO  liquibase.lockservice - Successfully released change log lock
+2024-09-07 01:54:24 INFO  liquibase.command - Command execution complete
+2024-09-07 01:54:24 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-07 01:54:24 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-09-07 01:54:24 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-07 01:54:24 INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2024-09-07 01:54:24 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-07 01:54:25 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.rntgroup.database.entity.Department
+2024-09-07 01:54:25 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-07 01:54:25 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 01:54:26 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-07 01:54:26 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-07 01:54:27 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ef9ce2b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cf782b6, org.springframework.security.web.context.SecurityContextHolderFilter@24841b02, org.springframework.security.web.header.HeaderWriterFilter@4b7b0f85, org.springframework.security.web.authentication.logout.LogoutFilter@649ded12, com.rntgroup.web.security.JwtTokenFilter@5f0369af, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2cfe5f7c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@88edd90, org.springframework.security.web.session.SessionManagementFilter@79ec9d81, org.springframework.security.web.access.ExceptionTranslationFilter@9cdef42, org.springframework.security.web.access.intercept.AuthorizationFilter@3324270d]
+2024-09-07 01:54:27 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-09-07 01:54:27 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-07 01:54:27 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-09-07 01:54:27 INFO  com.rntgroup.ApplicationRunner - Started ApplicationRunner in 5.706 seconds (process running for 6.19)
+2024-09-07 01:54:30 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-07 01:54:30 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-07 01:54:30 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-09-07 01:56:28 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2024-09-07 01:56:28 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: значение NULL в столбце "creation_date" отношения "department_aud" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (7, 4, 2, null, null, null).
+2024-09-07 01:56:28 ERROR c.r.web.controller.ControllerAdvice - could not execute statement [ОШИБКА: значение NULL в столбце "creation_date" отношения "department_aud" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (7, 4, 2, null, null, null).] [insert into department_aud (revtype,creation_date,name,parent_department_id,rev,id) values (?,?,?,?,?,?)]; SQL [insert into department_aud (revtype,creation_date,name,parent_department_id,rev,id) values (?,?,?,?,?,?)]; constraint [null]
+2024-09-07 01:58:35 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 01:58:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-07 01:58:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-07 02:00:10 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-07 02:00:10 INFO  com.rntgroup.ApplicationRunner - Starting ApplicationRunner using Java 21 with PID 18696 (C:\Users\Vadim\Desktop\Company\target\classes started by Vadim in C:\Users\Vadim\Desktop\Company)
+2024-09-07 02:00:10 INFO  com.rntgroup.ApplicationRunner - No active profile set, falling back to 1 default profile: "default"
+2024-09-07 02:00:10 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-07 02:00:10 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 5 JPA repository interfaces.
+2024-09-07 02:00:11 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-07 02:00:11 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-07 02:00:11 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-07 02:00:11 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-09-07 02:00:11 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-07 02:00:11 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1420 ms
+2024-09-07 02:00:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-07 02:00:11 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3a588b5f
+2024-09-07 02:00:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-07 02:00:11 INFO  liquibase.database - Set default schema name to public
+2024-09-07 02:00:12 INFO  liquibase.changelog - Creating database history table with name: public.databasechangelog
+2024-09-07 02:00:12 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 02:00:12 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-09-07 02:00:12 INFO  liquibase.command - Using deploymentId: 5663612313
+2024-09-07 02:00:12 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::1::rntgroup
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::1::rntgroup ran successfully in 33ms
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::2::rntgroup
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::2::rntgroup ran successfully in 15ms
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.0.sql::3::rntgroup
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.0.sql::3::rntgroup ran successfully in 9ms
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.1.sql::1::rntgroup
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.1.sql::1::rntgroup ran successfully in 6ms
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.1.sql::2::rntgroup
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.1.sql::2::rntgroup ran successfully in 11ms
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.2.sql::1::rntgroup
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.2.sql::1::rntgroup ran successfully in 5ms
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.3.sql::1::rntgroup
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.3.sql::1::rntgroup ran successfully in 7ms
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.4.sql::1::rntgroup
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.4.sql::1::rntgroup ran successfully in 18ms
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-1.5.sql::raw::includeAll
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-1.5.sql::raw::includeAll ran successfully in 7ms
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.0.sql::1::rntgroup
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.0.sql::1::rntgroup ran successfully in 12ms
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.0.sql::2::rntgroup
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.0.sql::2::rntgroup ran successfully in 5ms
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.1.sql::1::rntgroup
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.1.sql::1::rntgroup ran successfully in 4ms
+2024-09-07 02:00:12 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-2.2.sql::raw::includeAll
+2024-09-07 02:00:12 INFO  liquibase.changelog - Custom SQL executed
+2024-09-07 02:00:12 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-2.2.sql::raw::includeAll ran successfully in 4ms
+2024-09-07 02:00:12 INFO  liquibase.util - UPDATE SUMMARY
+2024-09-07 02:00:12 INFO  liquibase.util - Run:                         13
+2024-09-07 02:00:12 INFO  liquibase.util - Previously run:               0
+2024-09-07 02:00:12 INFO  liquibase.util - Filtered out:                 0
+2024-09-07 02:00:12 INFO  liquibase.util - -------------------------------
+2024-09-07 02:00:12 INFO  liquibase.util - Total change sets:           13
+2024-09-07 02:00:12 INFO  liquibase.util - Update summary generated
+2024-09-07 02:00:12 INFO  liquibase.command - Update command completed successfully.
+2024-09-07 02:00:12 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 54
+2024-09-07 02:00:12 INFO  liquibase.lockservice - Successfully released change log lock
+2024-09-07 02:00:12 INFO  liquibase.command - Command execution complete
+2024-09-07 02:00:12 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-07 02:00:12 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-09-07 02:00:12 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-07 02:00:12 INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2024-09-07 02:00:12 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-07 02:00:13 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.rntgroup.database.entity.Department
+2024-09-07 02:00:13 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-07 02:00:13 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 02:00:14 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-07 02:00:14 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-07 02:00:14 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c82ecbe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@acc6a69, org.springframework.security.web.context.SecurityContextHolderFilter@e8fabad, org.springframework.security.web.header.HeaderWriterFilter@1d9a80d8, org.springframework.security.web.authentication.logout.LogoutFilter@13e4a4a0, com.rntgroup.web.security.JwtTokenFilter@2202eee0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a44d89b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5547476c, org.springframework.security.web.session.SessionManagementFilter@2956985b, org.springframework.security.web.access.ExceptionTranslationFilter@82134e4, org.springframework.security.web.access.intercept.AuthorizationFilter@5a3783e4]
+2024-09-07 02:00:15 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-09-07 02:00:15 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-07 02:00:15 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-09-07 02:00:15 INFO  com.rntgroup.ApplicationRunner - Started ApplicationRunner in 5.679 seconds (process running for 6.118)
+2024-09-07 02:00:18 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-07 02:00:18 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-07 02:00:18 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-09-07 02:01:31 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 02:01:31 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-07 02:01:31 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-07 02:08:48 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-07 02:08:48 INFO  com.rntgroup.ApplicationRunner - Starting ApplicationRunner using Java 21 with PID 28456 (C:\Users\Vadim\Desktop\Company\target\classes started by Vadim in C:\Users\Vadim\Desktop\Company)
+2024-09-07 02:08:48 INFO  com.rntgroup.ApplicationRunner - No active profile set, falling back to 1 default profile: "default"
+2024-09-07 02:08:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-07 02:08:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
+2024-09-07 02:08:50 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-07 02:08:50 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-07 02:08:50 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-07 02:08:50 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-09-07 02:08:50 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-07 02:08:50 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2237 ms
+2024-09-07 02:08:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-07 02:08:50 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c6c2a73
+2024-09-07 02:08:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-07 02:08:50 INFO  liquibase.database - Set default schema name to public
+2024-09-07 02:08:51 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 02:08:51 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-09-07 02:08:51 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 02:08:51 INFO  liquibase.util - UPDATE SUMMARY
+2024-09-07 02:08:51 INFO  liquibase.util - Run:                          0
+2024-09-07 02:08:51 INFO  liquibase.util - Previously run:              13
+2024-09-07 02:08:51 INFO  liquibase.util - Filtered out:                 0
+2024-09-07 02:08:51 INFO  liquibase.util - -------------------------------
+2024-09-07 02:08:51 INFO  liquibase.util - Total change sets:           13
+2024-09-07 02:08:51 INFO  liquibase.util - Update summary generated
+2024-09-07 02:08:51 INFO  liquibase.lockservice - Successfully released change log lock
+2024-09-07 02:08:51 INFO  liquibase.command - Command execution complete
+2024-09-07 02:08:51 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-07 02:08:51 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-09-07 02:08:51 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-07 02:08:51 INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2024-09-07 02:08:51 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-07 02:08:52 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.rntgroup.database.entity.Department
+2024-09-07 02:08:53 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-07 02:08:53 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 02:08:53 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-07 02:08:54 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-07 02:08:54 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b36c5aa, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1af3bf5b, org.springframework.security.web.context.SecurityContextHolderFilter@579347a7, org.springframework.security.web.header.HeaderWriterFilter@2465e8be, org.springframework.security.web.authentication.logout.LogoutFilter@70fbab13, com.rntgroup.web.security.JwtTokenFilter@7150439c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@245a06f4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51fcecaa, org.springframework.security.web.session.SessionManagementFilter@55117fea, org.springframework.security.web.access.ExceptionTranslationFilter@5f33875f, org.springframework.security.web.access.intercept.AuthorizationFilter@6eaded2a]
+2024-09-07 02:08:54 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-09-07 02:08:54 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-07 02:08:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-09-07 02:08:54 INFO  com.rntgroup.ApplicationRunner - Started ApplicationRunner in 7.379 seconds (process running for 8.606)
+2024-09-07 02:10:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 02:10:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-07 02:10:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-07 02:10:54 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-07 02:10:54 INFO  com.rntgroup.ApplicationRunner - Starting ApplicationRunner using Java 21 with PID 22540 (C:\Users\Vadim\Desktop\Company\target\classes started by Vadim in C:\Users\Vadim\Desktop\Company)
+2024-09-07 02:10:54 INFO  com.rntgroup.ApplicationRunner - No active profile set, falling back to 1 default profile: "default"
+2024-09-07 02:10:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-07 02:10:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 5 JPA repository interfaces.
+2024-09-07 02:10:55 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-07 02:10:55 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-07 02:10:55 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-07 02:10:55 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-09-07 02:10:55 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-07 02:10:55 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1526 ms
+2024-09-07 02:10:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-07 02:10:56 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3a588b5f
+2024-09-07 02:10:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-07 02:10:56 INFO  liquibase.database - Set default schema name to public
+2024-09-07 02:10:56 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 02:10:56 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-09-07 02:10:56 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 02:10:56 INFO  liquibase.util - UPDATE SUMMARY
+2024-09-07 02:10:56 INFO  liquibase.util - Run:                          0
+2024-09-07 02:10:56 INFO  liquibase.util - Previously run:              13
+2024-09-07 02:10:56 INFO  liquibase.util - Filtered out:                 0
+2024-09-07 02:10:56 INFO  liquibase.util - -------------------------------
+2024-09-07 02:10:56 INFO  liquibase.util - Total change sets:           13
+2024-09-07 02:10:56 INFO  liquibase.util - Update summary generated
+2024-09-07 02:10:56 INFO  liquibase.lockservice - Successfully released change log lock
+2024-09-07 02:10:56 INFO  liquibase.command - Command execution complete
+2024-09-07 02:10:56 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-07 02:10:56 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-09-07 02:10:56 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-07 02:10:57 INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2024-09-07 02:10:57 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-07 02:10:57 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.rntgroup.database.entity.Department
+2024-09-07 02:10:58 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-07 02:10:58 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 02:10:58 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-07 02:10:59 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-07 02:10:59 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@73e9d4d0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3324270d, org.springframework.security.web.context.SecurityContextHolderFilter@cd68b88, org.springframework.security.web.header.HeaderWriterFilter@75f9ae0, org.springframework.security.web.authentication.logout.LogoutFilter@5b82e090, com.rntgroup.web.security.JwtTokenFilter@434e0136, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27b5c8d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59a9f3eb, org.springframework.security.web.session.SessionManagementFilter@39198a86, org.springframework.security.web.access.ExceptionTranslationFilter@486ab192, org.springframework.security.web.access.intercept.AuthorizationFilter@1f0bf0d0]
+2024-09-07 02:11:00 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-09-07 02:11:00 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-07 02:11:00 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-09-07 02:11:00 INFO  com.rntgroup.ApplicationRunner - Started ApplicationRunner in 6.404 seconds (process running for 6.957)
+2024-09-07 02:11:38 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 02:11:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-07 02:11:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-09-07 02:14:46 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-07 02:14:46 INFO  com.rntgroup.ApplicationRunner - Starting ApplicationRunner using Java 21 with PID 27972 (C:\Users\Vadim\Desktop\Company\target\classes started by Vadim in C:\Users\Vadim\Desktop\Company)
+2024-09-07 02:14:46 INFO  com.rntgroup.ApplicationRunner - No active profile set, falling back to 1 default profile: "default"
+2024-09-07 02:14:46 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-07 02:14:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 5 JPA repository interfaces.
+2024-09-07 02:14:47 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-09-07 02:14:47 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-07 02:14:47 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-07 02:14:47 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-09-07 02:14:48 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-09-07 02:14:48 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1774 ms
+2024-09-07 02:14:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-09-07 02:14:48 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@49cb5030
+2024-09-07 02:14:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-07 02:14:48 INFO  liquibase.database - Set default schema name to public
+2024-09-07 02:14:48 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 02:14:48 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-09-07 02:14:48 INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-09-07 02:14:48 INFO  liquibase.util - UPDATE SUMMARY
+2024-09-07 02:14:48 INFO  liquibase.util - Run:                          0
+2024-09-07 02:14:48 INFO  liquibase.util - Previously run:              13
+2024-09-07 02:14:48 INFO  liquibase.util - Filtered out:                 0
+2024-09-07 02:14:48 INFO  liquibase.util - -------------------------------
+2024-09-07 02:14:48 INFO  liquibase.util - Total change sets:           13
+2024-09-07 02:14:48 INFO  liquibase.util - Update summary generated
+2024-09-07 02:14:48 INFO  liquibase.lockservice - Successfully released change log lock
+2024-09-07 02:14:48 INFO  liquibase.command - Command execution complete
+2024-09-07 02:14:49 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-07 02:14:49 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-09-07 02:14:49 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-09-07 02:14:49 INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2024-09-07 02:14:49 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-07 02:14:49 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.rntgroup.database.entity.Department
+2024-09-07 02:14:50 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-07 02:14:50 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 02:14:51 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-07 02:14:51 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-07 02:14:52 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4785f176, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72c9576a, org.springframework.security.web.context.SecurityContextHolderFilter@3432a612, org.springframework.security.web.header.HeaderWriterFilter@7892045f, org.springframework.security.web.authentication.logout.LogoutFilter@3a0f6b1a, com.rntgroup.web.security.JwtTokenFilter@2b4bcd6e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@737fd68, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e1b750e, org.springframework.security.web.session.SessionManagementFilter@7f52aba0, org.springframework.security.web.access.ExceptionTranslationFilter@20f4849c, org.springframework.security.web.access.intercept.AuthorizationFilter@31809f2b]
+2024-09-07 02:14:52 WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2024-09-07 02:14:52 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-07 02:14:52 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-09-07 02:14:52 INFO  com.rntgroup.ApplicationRunner - Started ApplicationRunner in 6.994 seconds (process running for 7.487)
+2024-09-07 02:15:35 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-07 02:15:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-07 02:15:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

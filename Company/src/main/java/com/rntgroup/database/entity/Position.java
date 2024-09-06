@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "position")
 public class Position implements BaseEntity<Integer> {
 
     @Id

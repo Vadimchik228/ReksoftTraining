@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS department
     name                 TEXT NOT NULL UNIQUE,
     creation_date        DATE NOT NULL,
     parent_department_id INTEGER REFERENCES department (id)
-);
+    );
 --rollback DROP TABLE department;
 
 --changeset rntgroup:2
@@ -34,5 +34,5 @@ CREATE TABLE IF NOT EXISTS employee
     salary          DECIMAL(10, 2)                     NOT NULL,
     director        BOOLEAN                            NOT NULL,
     department_id   INTEGER REFERENCES department (id) NOT NULL
-);
+    );
 --rollback DROP TABLE employee;
