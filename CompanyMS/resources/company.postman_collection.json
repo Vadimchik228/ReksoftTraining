@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "de966cc4-ebf3-46bb-a53b-fc892dd61e2f",
+		"name": "company",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30779457"
+	},
+	"item": [
+		{
+			"name": "positions",
+			"item": [
+				{
+					"name": "Get position",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8070/api/v1/positions/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all positions",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8070/api/v1/positions"
+					},
+					"response": []
+				},
+				{
+					"name": "Create position",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Аналитик данныхх\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8070/api/v1/positions"
+					},
+					"response": []
+				},
+				{
+					"name": "Update position",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 8,\r\n    \"name\": \"Руководитель проектавв\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8070/api/v1/positions"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete position",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8070/api/v1/positions/13"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employees",
+			"item": [
+				{
+					"name": "Get employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8070/api/v1/employees/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get director",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8070/api/v1/employees/1/director"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8070/api/v1/employees/3/employees"
+					},
+					"response": []
+				},
+				{
+					"name": "Create employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\": \"Вадимов\",\r\n    \"firstName\": \"Вадим\",\r\n    \"patronymic\": \"Вадимович\",\r\n    \"sex\": \"MALE\",\r\n    \"birthDate\": \"2003-11-04\",\r\n    \"phoneNumber\": \"+7 (495) 456-45-30\",\r\n    \"employmentDate\": \"2024-09-12\",\r\n    \"dismissalDate\": null,\r\n    \"positionId\": 4,\r\n    \"salary\": 100000.00,\r\n    \"isDirector\": false,\r\n    \"departmentId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8070/api/v1/employees"
+					},
+					"response": []
+				},
+				{
+					"name": "Update employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 11,\r\n    \"lastName\": \"Борисов\",\r\n    \"firstName\": \"Александр\",\r\n    \"patronymic\": \"Николаевич\",\r\n    \"sex\": \"MALE\",\r\n    \"birthDate\": \"2000-07-01\",\r\n    \"phoneNumber\": \"+7 (950) 133-45-67\",\r\n    \"employmentDate\": \"2023-07-01\",\r\n    \"dismissalDate\": null,\r\n    \"positionId\": 8,\r\n    \"salary\": 110000.00,\r\n    \"isDirector\": true,\r\n    \"departmentId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8070/api/v1/employees"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete employee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8070/api/v1/employees/21"
+					},
+					"response": []
+				},
+				{
+					"name": "Get count of employees",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8070/api/v1/employees/1/count"
+					},
+					"response": []
+				},
+				{
+					"name": "Get salary fund",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8070/api/v1/employees/1/salaryFund"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "departments",
+			"item": [
+				{
+					"name": "Get department",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8060/api/v1/departments/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Get department by name",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8060/api/v1/departments/name/Департамент финансов и управления"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all departments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8060/api/v1/departments"
+					},
+					"response": []
+				},
+				{
+					"name": "Create department",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Департамент название которого я не придумал3\",\r\n    \"creationDate\": \"2023-08-10\",\r\n    \"parentDepartmentId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8060/api/v1/departments"
+					},
+					"response": []
+				},
+				{
+					"name": "Update department",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Департамент управления проектам\",\r\n    \"creationDate\": \"2023-05-01\",\r\n    \"parentDepartmentId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8060/api/v1/departments"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete department",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8060/api/v1/departments/8"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
