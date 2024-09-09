@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="gateway-service" />
+        <module name="discovery-service" />
+      </profile>
+      <profile name="Annotation profile for employee-service" enabled="true">
+        <sourceOutputDir name="../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="department-api" />
+        <module name="employee-api" />
+        <module name="employee-impl" />
+        <module name="department-db" />
+        <module name="employee-db" />
+        <module name="department-impl" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="discovery" target="17" />
+      <module name="employee" target="17" />
+      <module name="gateway" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-server" options="" />
+      <module name="department-api" options="" />
+      <module name="department-db" options="" />
+      <module name="department-impl" options="" />
+      <module name="department-service" options="" />
+      <module name="discovery-service" options="" />
+      <module name="employee-api" options="" />
+      <module name="employee-db" options="" />
+      <module name="employee-impl" options="" />
+      <module name="employee-service" options="" />
+      <module name="gateway-service" options="" />
+    </option>
+  </component>
+</project>
