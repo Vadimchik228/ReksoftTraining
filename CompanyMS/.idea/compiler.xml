@@ -8,19 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
-        <module name="gateway-service" />
-        <module name="discovery-service" />
-      </profile>
-      <profile name="Annotation profile for employee-service" enabled="true">
-        <sourceOutputDir name="../target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
         <module name="department-api" />
         <module name="employee-api" />
-        <module name="employee-impl" />
         <module name="department-db" />
+        <module name="gateway-service" />
         <module name="employee-db" />
         <module name="department-impl" />
+        <module name="employee-impl" />
+        <module name="discovery-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,17 +26,17 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="config-server" options="" />
-      <module name="department-api" options="" />
-      <module name="department-db" options="" />
-      <module name="department-impl" options="" />
+      <module name="config-server" options="-parameters" />
+      <module name="department-api" options="-parameters" />
+      <module name="department-db" options="-parameters" />
+      <module name="department-impl" options="-parameters" />
       <module name="department-service" options="" />
-      <module name="discovery-service" options="" />
-      <module name="employee-api" options="" />
-      <module name="employee-db" options="" />
-      <module name="employee-impl" options="" />
+      <module name="discovery-service" options="-parameters" />
+      <module name="employee-api" options="-parameters" />
+      <module name="employee-db" options="-parameters" />
+      <module name="employee-impl" options="-parameters" />
       <module name="employee-service" options="" />
-      <module name="gateway-service" options="" />
+      <module name="gateway-service" options="-parameters" />
     </option>
   </component>
 </project>

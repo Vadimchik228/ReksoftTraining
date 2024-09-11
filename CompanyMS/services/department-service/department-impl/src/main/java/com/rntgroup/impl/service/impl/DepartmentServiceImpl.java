@@ -2,6 +2,7 @@ package com.rntgroup.impl.service.impl;
 
 import com.rntgroup.api.client.EmployeeClient;
 import com.rntgroup.api.dto.DepartmentDto;
+import com.rntgroup.api.exception.FeignClientNotFoundException;
 import com.rntgroup.api.exception.InvalidDataException;
 import com.rntgroup.api.exception.InvalidDeletionException;
 import com.rntgroup.api.exception.ResourceNotFoundException;
@@ -113,9 +114,17 @@ public class DepartmentServiceImpl implements DepartmentService {
         checkIfDepartmentIdExists(id);
 
         var employeesCount = employeeClient.getCountOfAllByDepartmentId(id);
+
+        if (employeesCount == null) {
+            throw new FeignClientNotFoundException(
+                    "Couldn't count all employees of department with id " + id + "."
+            );
+        }
+
         if (employeesCount > 0L) {
             throw new InvalidDeletionException(
-                    "Couldn't delete department with id " + id + "."
+                    "Couldn't delete department with id " + id + "." +
+                    " There are dependent employees in the DB."
             );
         }
 

@@ -8,13 +8,15 @@ import java.math.BigDecimal;
 
 @FeignClient(
         name = "employee-service",
-        url = "${application.config.employee-url}"
+        url = "${application.config.employee-url}",
+        fallbackFactory = EmployeeClientFallbackFactory.class
 )
 public interface EmployeeClient {
 
     @GetMapping("/{departmentId}/count")
-    Long getCountOfAllByDepartmentId(@PathVariable final Integer departmentId);
+    Long getCountOfAllByDepartmentId(@PathVariable Integer departmentId);
 
     @GetMapping("/{departmentId}/salaryFund")
-    BigDecimal getSalaryFundByDepartmentId(@PathVariable final Integer departmentId);
+    BigDecimal getSalaryFundByDepartmentId(@PathVariable Integer departmentId);
+
 }
