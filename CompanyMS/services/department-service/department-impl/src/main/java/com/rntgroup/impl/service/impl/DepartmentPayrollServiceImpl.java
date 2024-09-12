@@ -11,7 +11,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Service
@@ -37,7 +36,6 @@ public class DepartmentPayrollServiceImpl implements DepartmentPayrollService {
             var salaryFund = employeeClient.getSalaryFundByDepartmentId(
                     department.getId()
             );
-            if (salaryFund == null) salaryFund = BigDecimal.ZERO;
 
             var departmentPayroll = DepartmentPayroll.builder()
                     .departmentId(department.getId())

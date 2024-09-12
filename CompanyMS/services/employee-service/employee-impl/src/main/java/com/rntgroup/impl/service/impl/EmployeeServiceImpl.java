@@ -8,6 +8,7 @@ import com.rntgroup.impl.repository.PositionRepository;
 import com.rntgroup.impl.service.EmployeeService;
 import com.rntroup.api.client.DepartmentClient;
 import com.rntroup.api.dto.EmployeeDto;
+import com.rntroup.api.exception.FeignClientNotFoundException;
 import com.rntroup.api.exception.InvalidDataException;
 import com.rntroup.api.exception.ResourceNotFoundException;
 import feign.FeignException;
@@ -145,7 +146,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         try {
             departmentClient.getById(departmentId);
         } catch (FeignException e) {
-            throw new ResourceNotFoundException(
+            throw new FeignClientNotFoundException(
                     "Couldn't find department with id " + departmentId + "."
             );
         }

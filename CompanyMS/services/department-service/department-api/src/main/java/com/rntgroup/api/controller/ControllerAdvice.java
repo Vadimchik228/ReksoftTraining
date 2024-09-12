@@ -2,10 +2,7 @@ package com.rntgroup.api.controller;
 
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
-import com.rntgroup.api.exception.ExceptionBody;
-import com.rntgroup.api.exception.InvalidDataException;
-import com.rntgroup.api.exception.InvalidDeletionException;
-import com.rntgroup.api.exception.ResourceNotFoundException;
+import com.rntgroup.api.exception.*;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
@@ -26,6 +23,12 @@ public class ControllerAdvice {
     @ExceptionHandler(ResourceNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ExceptionBody handleResourceNotFound(final ResourceNotFoundException e) {
+        return new ExceptionBody(e.getMessage());
+    }
+
+    @ExceptionHandler(FeignClientNotFoundException.class)
+    @ResponseStatus(HttpStatus.SERVICE_UNAVAILABLE)
+    public ExceptionBody handleFeignClientNotFound(final FeignClientNotFoundException e) {
         return new ExceptionBody(e.getMessage());
     }
 
