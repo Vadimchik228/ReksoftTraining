@@ -3,11 +3,14 @@ package com.rntgroup.impl.service.impl;
 import com.rntgroup.impl.entity.Employee;
 import com.rntgroup.impl.entity.Position;
 import com.rntgroup.impl.mapper.EmployeeMapper;
+import com.rntgroup.impl.mapper.SimpleDepartmentMapper;
+import com.rntgroup.impl.repository.DepartmentSnapshotRepository;
 import com.rntgroup.impl.repository.EmployeeRepository;
 import com.rntgroup.impl.repository.PositionRepository;
 import com.rntgroup.impl.service.EmployeeService;
 import com.rntroup.api.client.DepartmentClient;
 import com.rntroup.api.dto.EmployeeDto;
+import com.rntroup.api.dto.SimpleDepartmentDto;
 import com.rntroup.api.exception.FeignClientNotFoundException;
 import com.rntroup.api.exception.InvalidDataException;
 import com.rntroup.api.exception.ResourceNotFoundException;
@@ -29,7 +32,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     private final EmployeeRepository employeeRepository;
     private final PositionRepository positionRepository;
     private final EmployeeMapper employeeMapper;
+    private final DepartmentSnapshotRepository departmentSnapshotRepository;
     private final DepartmentClient departmentClient;
+    private final SimpleDepartmentMapper simpleDepartmentMapper;
 
     @Override
     @Transactional(readOnly = true)
@@ -43,7 +48,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    @Transactional(readOnly = true)
     public Optional<EmployeeDto> getDirectorByDepartmentId(final Integer departmentId) {
         checkIfDepartmentIdExists(departmentId);
         return employeeRepository.findDirectorByDepartmentId(departmentId)
@@ -111,7 +115,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    @Transactional(readOnly = true)
     public Long countAllByDepartmentId(final Integer departmentId) {
         checkIfDepartmentIdExists(departmentId);
         var employeesCount = employeeRepository.countAllByDepartmentId(departmentId);
@@ -119,7 +122,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    @Transactional(readOnly = true)
     public BigDecimal sumSalariesByDepartmentId(final Integer departmentId) {
         checkIfDepartmentIdExists(departmentId);
         var salaryFund = employeeRepository.sumSalariesByDepartmentId(departmentId);
@@ -143,12 +145,22 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     private void checkIfDepartmentIdExists(final Integer departmentId) {
-        try {
-            departmentClient.getById(departmentId);
-        } catch (FeignException e) {
-            throw new FeignClientNotFoundException(
-                    "Couldn't find department with id " + departmentId + "."
-            );
+        if (!departmentSnapshotRepository.existsById(departmentId)) {
+            try {
+                var departmentDto = departmentClient.getById(departmentId);
+                var simpleDepartmentDto = new SimpleDepartmentDto(
+                        departmentId,
+                        departmentDto.name()
+                );
+
+                departmentSnapshotRepository.saveAndFlush(
+                        simpleDepartmentMapper.toEntity(simpleDepartmentDto)
+                );
+            } catch (FeignException e) {
+                throw new FeignClientNotFoundException(
+                        "Couldn't find department with id " + departmentId + "."
+                );
+            }
         }
     }
 
