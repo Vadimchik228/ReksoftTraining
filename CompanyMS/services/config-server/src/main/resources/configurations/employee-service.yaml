@@ -18,6 +18,14 @@ spring:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: employee-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+
 application:
   config:
     department-url: http://localhost:8222/api/v1/departments

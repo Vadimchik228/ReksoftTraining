@@ -34,6 +34,7 @@
 		<jakarta.ws.rs.api.version>3.0.0</jakarta.ws.rs.api.version>
 		<hibernate.envers.version>6.5.0.Final</hibernate.envers.version>
 		<spring.data.envers.version>3.3.2</spring.data.envers.version>
+		<spring-kafka.version>3.2.4</spring-kafka.version>
 	</properties>
 
 	<dependencies>
@@ -186,6 +187,12 @@
 			<groupId>org.testcontainers</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+			<version>${spring-kafka.version}</version>
 		</dependency>
 	</dependencies>
 

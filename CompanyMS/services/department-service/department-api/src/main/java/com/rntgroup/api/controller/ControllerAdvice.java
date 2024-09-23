@@ -91,6 +91,13 @@ public class ControllerAdvice {
         return exceptionBody;
     }
 
+    @ExceptionHandler(DtoSerializationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ExceptionBody handleJsonProcessingException(
+            final DtoSerializationException e) {
+        return new ExceptionBody(e.getMessage());
+    }
+
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ExceptionBody handleException(final Exception ignored) {

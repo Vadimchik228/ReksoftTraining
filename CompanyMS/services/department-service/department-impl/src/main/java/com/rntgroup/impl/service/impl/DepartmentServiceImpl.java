@@ -6,6 +6,7 @@ import com.rntgroup.api.exception.FeignClientNotFoundException;
 import com.rntgroup.api.exception.InvalidDataException;
 import com.rntgroup.api.exception.InvalidDeletionException;
 import com.rntgroup.api.exception.ResourceNotFoundException;
+import com.rntgroup.impl.kafka.DepartmentProducer;
 import com.rntgroup.impl.mapper.DepartmentMapper;
 import com.rntgroup.impl.repository.DepartmentRepository;
 import com.rntgroup.impl.service.DepartmentService;
@@ -28,6 +29,7 @@ public class DepartmentServiceImpl implements DepartmentService {
     private final DepartmentMapper departmentMapper;
     private final EntityManager entityManager;
     private final EmployeeClient employeeClient;
+    private final DepartmentProducer departmentProducer;
 
     @Override
     @Transactional(readOnly = true)
@@ -100,6 +102,9 @@ public class DepartmentServiceImpl implements DepartmentService {
                 entity.setParentDepartment(parentEntity.get());
             }
             entity = departmentRepository.saveAndFlush(entity);
+
+            departmentProducer.sendDepartmentCreated(entity);
+
             dto.setId(entity.getId());
             return dto;
         } catch (DataIntegrityViolationException ex) {
@@ -130,6 +135,8 @@ public class DepartmentServiceImpl implements DepartmentService {
 
         departmentRepository.deleteById(id);
         entityManager.flush();
+
+        departmentProducer.sendDepartmentDeleted(id);
     }
 
     private void checkIfDepartmentIdExists(final Integer departmentId) {
