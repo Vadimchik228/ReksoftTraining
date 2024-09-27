@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Generated
 @Entity
 public class Employee implements BaseEntity<Long> {
 

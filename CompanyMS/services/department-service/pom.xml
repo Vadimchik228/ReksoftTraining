@@ -35,6 +35,7 @@
 		<hibernate.envers.version>6.5.0.Final</hibernate.envers.version>
 		<spring.data.envers.version>3.3.2</spring.data.envers.version>
 		<spring-kafka.version>3.2.4</spring-kafka.version>
+		<jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
 	</properties>
 
 	<dependencies>
@@ -207,5 +208,61 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco-maven-plugin.version}</version>
+
+				<configuration>
+					<excludes>
+						<exclude>**/*MapperImpl.class</exclude>
+						<exclude>**/*Configuration.class</exclude>
+					</excludes>
+				</configuration>
+
+				<executions>
+					<execution>
+						<id>default-prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+
+					<execution>
+						<id>report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+
+					<execution>
+						<id>check-coverage</id>
+						<phase>package</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<rule>
+									<element>BUNDLE</element>
+									<limits>
+										<limit>
+											<counter>INSTRUCTION</counter>
+											<value>COVEREDRATIO</value>
+											<minimum>0.70</minimum>
+										</limit>
+									</limits>
+								</rule>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

@@ -7,11 +7,13 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Null;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Generated;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Generated
 @Schema(description = "Position DTO")
 public class PositionDto {
 

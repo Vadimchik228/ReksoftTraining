@@ -5,6 +5,7 @@ import com.rntgroup.impl.repository.PositionRepository;
 import com.rntgroup.impl.service.PositionService;
 import com.rntroup.api.dto.PositionDto;
 import com.rntroup.api.exception.InvalidDataException;
+import com.rntroup.api.exception.InvalidDeletionException;
 import com.rntroup.api.exception.ResourceNotFoundException;
 import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
@@ -14,8 +15,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.lang.module.ResolutionException;
 
 @Service
 @RequiredArgsConstructor
@@ -31,7 +30,7 @@ public class PositionServiceImpl implements PositionService {
     public PositionDto getById(final Integer id) {
         return positionRepository.findById(id)
                 .map(positionMapper::toDto)
-                .orElseThrow(() -> new ResolutionException(
+                .orElseThrow(() -> new ResourceNotFoundException(
                                 "Couldn't find position with id " + id + "."
                         )
                 );
@@ -79,7 +78,7 @@ public class PositionServiceImpl implements PositionService {
             positionRepository.deleteById(id);
             entityManager.flush();
         } catch (ConstraintViolationException ex) {
-            throw new InvalidDataException(
+            throw new InvalidDeletionException(
                     "Couldn't delete position with id " + id + "." +
                     " There are dependent employees in the DB."
             );

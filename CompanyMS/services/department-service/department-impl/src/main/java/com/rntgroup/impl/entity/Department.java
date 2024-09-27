@@ -1,10 +1,7 @@
 package com.rntgroup.impl.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.envers.Audited;
 import org.hibernate.envers.RelationTargetAuditMode;
 
@@ -14,6 +11,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Generated
 @Entity
 @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
 public class Department implements BaseEntity<Integer> {

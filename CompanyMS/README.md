@@ -31,3 +31,23 @@
 Просмотр содержимого таблиц БД:
 
 <img src="images/db.png" alt="db"/>
+
+### Запуск интеграционных тестов:
+
+1. Откройте терминал в IntellijIDEA и напишите команду: _docker compose up -d_;
+2. В случае успешного запуска всех docker-контейнеров в указанном порядке запустите микросервисы:
+   - Run 'ConfigServerApplication';
+   - Run 'DiscoveryApplication';
+   - Run 'GatewayApplication';
+   - Run 'EmployeeApplication';
+   - Run 'DepartmentApplication'.
+
+Примечание: Если вы ранее использовали это приложение и вносили изменения в БД, то **рекомендуется перед запуском интеграционных тестов** очистить все таблицы, используя pgAdmin.
+
+### Покрытие кода тестами (JaCoCo): 
+1. department-service:
+   <img src="images/department-api-jacoco.png" alt="daj"/>
+   <img src="images/department-impl-jacoco.png" alt="dij"/>
+2. employee-service:
+   <img src="images/employee-api-jacoco.png" alt="eaj"/>
+   <img src="images/employee-impl-jacoco.png" alt="eij"/>

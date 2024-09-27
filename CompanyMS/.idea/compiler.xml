@@ -21,6 +21,7 @@
     <bytecodeTargetLevel>
       <module name="discovery" target="17" />
       <module name="employee" target="17" />
+      <module name="employee-aggregate-report" target="17" />
       <module name="gateway" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -32,6 +33,7 @@
       <module name="department-impl" options="-parameters" />
       <module name="department-service" options="" />
       <module name="discovery-service" options="-parameters" />
+      <module name="employee-aggregate-report" options="-parameters" />
       <module name="employee-api" options="-parameters" />
       <module name="employee-db" options="-parameters" />
       <module name="employee-impl" options="-parameters" />
