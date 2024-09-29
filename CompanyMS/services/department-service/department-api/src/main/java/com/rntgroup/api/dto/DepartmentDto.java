@@ -10,6 +10,7 @@ import jakarta.validation.constraints.Null;
 import jakarta.validation.constraints.Past;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Generated;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
@@ -17,6 +18,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Generated
 @Schema(description = "Department DTO")
 @CorrectParentDepartmentId(
         groups = {OnCreate.class, OnUpdate.class}

@@ -1,11 +1,13 @@
 package com.rntroup.api.dto;
 
+import lombok.Generated;
 import lombok.Value;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
 
 @Value
+@Generated
 public class PageResponse<T> {
     List<T> content;
     Metadata metadata;
@@ -16,6 +18,7 @@ public class PageResponse<T> {
     }
 
     @Value
+    @Generated
     public static class Metadata {
         int page;
         int size;

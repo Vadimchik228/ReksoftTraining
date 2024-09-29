@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Generated;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
@@ -19,6 +20,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Generated
 @Schema(description = "Employee DTO")
 @EmploymentDateAfterBirthDate(
         groups = {OnCreate.class, OnUpdate.class}
