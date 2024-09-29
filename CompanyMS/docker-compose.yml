@@ -66,6 +66,68 @@ services:
     networks:
       - microservices-net
 
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - 3000:3000
+    depends_on:
+      - prometheus
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    networks:
+      - microservices-net
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - 9090:9090
+    user: root
+    volumes:
+      - ./services/config-server/src/main/resources/configurations/prometheus:/prometheus
+    command: [ "--config.file=/prometheus/prometheus.yml", "--log.level=debug" ]
+    networks:
+      - microservices-net
+
+  node-exporter:
+    image: prom/node-exporter
+    volumes:
+      - /run/udev/data:/run/udev/data:ro
+      - /proc:/proc:rw
+      - /sys:/sys:ro
+    container_name: node-exporter
+    hostname: node-exporter
+    command:
+      - --path.procfs=/proc
+      - --path.sysfs=/sys
+      - --collector.filesystem.ignored-mount-points
+      - ^/(sys|proc|dev|host|etc|rootfs/var/lib/docker/containers|rootfs/var/lib/docker/overlay2|rootfs/run/docker/netns|rootfs/var/lib/docker/aufs)($$|/)
+    ports:
+      - 9100:9100
+    networks:
+      - microservices-net
+
+  jmx-exporter:
+    image: bitnami/jmx-exporter
+    container_name: jmx-exporter
+    ports:
+      - 5556:5556
+    networks:
+      - microservices-net
+
+  pushgateway:
+    image: prom/pushgateway:latest
+    container_name: pushgateway
+    ports:
+      - 9091:9091
+    environment:
+      - PUSHGATEWAY_STORAGE_PATH=/pushgateway/data
+      - PUSHGATEWAY_METRICS_PATH=/pushgateway/metrics
+    networks:
+      - microservices-net
+
 networks:
   microservices-net:
     driver: bridge

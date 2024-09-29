@@ -34,6 +34,7 @@
         <libphonenumber.version>8.13.44</libphonenumber.version>
         <spring-kafka.version>3.2.4</spring-kafka.version>
         <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
+        <simpleclient.pushgateway.version>0.16.0</simpleclient.pushgateway.version>
     </properties>
 
     <dependencies>
@@ -75,6 +76,22 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_pushgateway</artifactId>
+            <version>${simpleclient.pushgateway.version}</version>
         </dependency>
 
         <dependency>

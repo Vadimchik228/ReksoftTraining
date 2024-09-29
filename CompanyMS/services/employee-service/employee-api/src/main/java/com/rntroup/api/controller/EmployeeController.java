@@ -36,8 +36,7 @@ public interface EmployeeController {
 
     @PostMapping
     @Operation(summary = "Create employee")
-    EmployeeDto create(
-            @Validated(OnCreate.class) @RequestBody EmployeeDto dto);
+    EmployeeDto create(@Validated(OnCreate.class) @RequestBody EmployeeDto dto);
 
     @PutMapping
     @Operation(summary = "Update employee")
