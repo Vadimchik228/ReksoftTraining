@@ -24,6 +24,14 @@
 Инструмент для распределенного трассирования:
    - http://localhost:9411/zipkin/
 
+### Prometheus:
+Система мониторинга и оповещения:
+- http://localhost:9090
+
+### Grafana:
+Инструмент визуализации данных и создания дашбордов:
+- http://localhost:3000
+
 ### Postman:
 В _resources_ приложен _company.postman_collection.json_ для тестирования API.
 
@@ -46,8 +54,8 @@
 
 ### Покрытие кода тестами (JaCoCo): 
 1. department-service:
-   <img src="images/department-api-jacoco.png" alt="daj"/>
-   <img src="images/department-impl-jacoco.png" alt="dij"/>
+   <img src="images/jacoco/department-api-jacoco.png" alt="daj"/>
+   <img src="images/jacoco/department-impl-jacoco.png" alt="dij"/>
 2. employee-service:
-   <img src="images/employee-api-jacoco.png" alt="eaj"/>
-   <img src="images/employee-impl-jacoco.png" alt="eij"/>
+   <img src="images/jacoco/employee-api-jacoco.png" alt="eaj"/>
+   <img src="images/jacoco/employee-impl-jacoco.png" alt="eij"/>

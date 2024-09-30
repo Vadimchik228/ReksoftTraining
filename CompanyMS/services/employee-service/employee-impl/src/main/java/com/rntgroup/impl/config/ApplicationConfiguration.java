@@ -1,5 +1,6 @@
 package com.rntgroup.impl.config;
 
+import com.rntroup.api.aop.EmployeeCreationTimeAspect;
 import com.rntroup.api.config.ControllerAdviceConfiguration;
 import com.rntroup.api.config.FeignConfiguration;
 import com.rntroup.api.config.OpenApiConfiguration;
@@ -8,7 +9,8 @@ import org.springframework.context.annotation.Import;
 
 @Import({FeignConfiguration.class,
         ControllerAdviceConfiguration.class,
-        OpenApiConfiguration.class})
+        OpenApiConfiguration.class,
+        EmployeeCreationTimeAspect.class})
 @Configuration
 public class ApplicationConfiguration {
 }
