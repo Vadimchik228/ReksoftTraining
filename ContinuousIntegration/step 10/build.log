@@ -1,0 +1,81 @@
+Запущен по таймеру
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\SimpleJob
+Checking for pre-build
+Executing pre-build step
+Checking if email needs to be generated
+No emails were triggered.
+[SimpleJob] $ cmd /c call C:\Windows\TEMP\jenkins1885976630859678257.bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\SimpleJob>echo "Текущая версия сборки: 99" 
+"Текущая версия сборки: 99"
+
+C:\ProgramData\Jenkins\.jenkins\workspace\SimpleJob>exit 0 
+Checking for post-build
+Performing post-build step
+Checking if email needs to be generated
+Email was triggered for: Always
+Sending email for trigger: Always
+Sending mail from default account using System Admin e-mail address
+messageContentType = text/plain; charset=UTF-8
+Request made to attach build log
+  Collecting change authors...
+    build: 99
+Adding recipients from project recipient list
+Analyzing: schebetovskiyvadim@mail.ru
+Looking for: schebetovskiyvadim@mail.ru
+	starting at: 0
+	firstFoundIdx: 0
+	firstFoundIdx-substring: schebetovskiyvadim@mail.ru
+	=> found type: 0
+Analyzing: schebetovskiyvadim@mail.ru
+Looking for: schebetovskiyvadim@mail.ru
+	starting at: 0
+	firstFoundIdx: 0
+	firstFoundIdx-substring: schebetovskiyvadim@mail.ru
+	=> found type: 0
+Analyzing: schebetovskiyvadim@mail.ru
+Looking for: schebetovskiyvadim@mail.ru
+	starting at: 0
+	firstFoundIdx: 0
+	firstFoundIdx-substring: schebetovskiyvadim@mail.ru
+	=> found type: 0
+Adding recipients from trigger recipient list
+Successfully created MimeMessage
+Sending email to: schebetovskiyvadim@mail.ru
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: need username and password for authentication
+DEBUG SMTP: protocolConnect returning false, host=smtp.mail.ru, user=DESKTOP-IAFFUE8$, password=<null>
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "smtp.mail.ru", port 465, isSSL false
+220 smtp16.i.mail.ru ESMTP ready (Looking for Mail for your domain? Visit https://biz.mail.ru)
+DEBUG SMTP: connected to host "smtp.mail.ru", port: 465
+EHLO DESKTOP-IAFFUE8
+250-smtp16.i.mail.ru
+250-SIZE 73400320
+250-8BITMIME
+250-PIPELINING
+250-DSN
+250-SMTPUTF8
+250 AUTH PLAIN LOGIN XOAUTH2
+DEBUG SMTP: Found extension "SIZE", arg "73400320"
+DEBUG SMTP: Found extension "8BITMIME", arg ""
+DEBUG SMTP: Found extension "PIPELINING", arg ""
+DEBUG SMTP: Found extension "DSN", arg ""
+DEBUG SMTP: Found extension "SMTPUTF8", arg ""
+DEBUG SMTP: Found extension "AUTH", arg "PLAIN LOGIN XOAUTH2"
+DEBUG SMTP: protocolConnect login, host=smtp.mail.ru, user=schebetovskiyvadim@mail.ru, password=<non-null>
+DEBUG SMTP: Attempt to authenticate using mechanisms: LOGIN PLAIN DIGEST-MD5 NTLM XOAUTH2 
+DEBUG SMTP: Using mechanism LOGIN
+DEBUG SMTP: AUTH LOGIN command trace suppressed
+DEBUG SMTP: AUTH LOGIN succeeded
+DEBUG SMTP: use8bit false
+MAIL FROM:<schebetovskiyvadim@mail.ru>
+250 OK
+DEBUG SMTP: sendPartial set
+RCPT TO:<schebetovskiyvadim@mail.ru>
+250 Accepted
+DEBUG SMTP: Verified Addresses
+DEBUG SMTP:   schebetovskiyvadim@mail.ru
+DATA
+354 Enter message, ending with "." on a line by itself
